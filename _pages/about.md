@@ -14,8 +14,8 @@ my research is centered around gesture-based understanding and human-computer in
 
 Publications
 ======
-
 XXX
+
 News
 ======
 XXXX
