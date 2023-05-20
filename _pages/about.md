@@ -14,12 +14,12 @@ my research is centered around gesture-based understanding and human-computer in
 
 Publications
 ======
-{% include_markdown publications.md %}
 
-
+XXX
 News
 ======
+XXXX
 
-{% include_markdown cv.md %}
+
 
 
