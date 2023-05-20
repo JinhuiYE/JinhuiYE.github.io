@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Jinhui Ye`s Homepage2"
+title                    : "Jinhui Ye`s Homepage"
 title_separator          : "-"
-name                     : &name "Jinhui Ye2"
+name                     : &name "Jinhui Ye" # non work
 description              : &description "personal description"
 url                      : https://jinhuiye.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
