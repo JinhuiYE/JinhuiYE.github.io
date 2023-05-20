@@ -265,7 +265,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
-  - jekyll-include-markdown #@jinhui
+#  - jekyll-include-markdown #@jinhui
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
