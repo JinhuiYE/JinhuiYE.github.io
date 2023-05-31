@@ -83,7 +83,6 @@ author:
   name             : "Jinhui Ye"
   avatar           : "bio-pho-1.jpg"
   bio              : "M.Phil. Candidate in Artificial Intelligence @ HKUST(GZ)"
-  location         : "Guangzhou, China"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : #"http://yourfullgooglescholarurl.com"
@@ -115,6 +114,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
+  location         : "Guangzhou, China"
 
 
 # Reading Files
