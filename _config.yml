@@ -11,7 +11,7 @@ title                    : "Jinhui Ye`s Homepage"
 title_separator          : "-"
 name                     : &name "Jinhui Ye (叶劲辉)" # for copyright
 description              : &description "personal description"
-url                      : https://jinhuiye.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://jhuiye.com  #https://jinhuiye.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "JinhuiYE/JinhuiYE.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -80,8 +80,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "Jinhui Ye"
-  avatar           : "bio-pho-1.jpg"
+  name             : "Jinhui Ye (叶劲辉)"
+  avatar           : "me.jpg"
   bio              : "M.Phil. Candidate in Artificial Intelligence @ HKUST(GZ)"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"

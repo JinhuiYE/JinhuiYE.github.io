@@ -1,10 +1,10 @@
 # main links links
 main:
-  - title: "Publications"
-    url: /publications/
+#  - title: "Publications"
+#    url: /publications/
 
   - title: "CV"
-    url: /cv/
+    url: https://docs.qq.com/pdf/DSUpLQWlLbnVsY2Vy?
 
 #  - title: "Talks"
 #    url: /talks/
