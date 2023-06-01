@@ -33,5 +33,5 @@ Publications
 Awards
 ------
 
-• Outstanding Undergraduate Thesis in SCUT
+• Outstanding Undergraduate Thesis in SCUT <br>
 • National Scholarship in China
