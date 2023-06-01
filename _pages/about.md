@@ -20,10 +20,10 @@ My research is centered around gesture-based understanding and human-computer co
 Publications
 ======
 
-**Cross-modality Data Augmentation for End-to-End Sign Language Translation.** <br>
+**Cross-modality Data Augmentation for End-to-End Sign Language Translation** <br>
   Authors: **Jinhui Ye**, Wenxiang Jiao, Xing Wang, Zhaopeng Tu, Hui Xiong <br>
   Preprint 2023. [[arxiv]](https://arxiv.org/abs/2305.11096) [[code]](https://github.com/Atrewin/SignXmDA) <br>
-**Scaling Back-Translation with Domain Text Generation for Sign Language Gloss Translation.**  <br>
+**Scaling Back-Translation with Domain Text Generation for Sign Language Gloss Translation**  <br>
   Authors: **Jinhui Ye**, Wenxiang Jiao, Xing Wang, Zhaopeng Tu <br>
   EACL 2023. [[arxiv]](https://arxiv.org/abs/2210.07054) [[code]](https://github.com/Atrewin/PGen) <br>
 **Aspect-Opinion Correlation Aware and Knowledge-Expansion Few Shot Cross-Domain Sentiment Classification** <br>
