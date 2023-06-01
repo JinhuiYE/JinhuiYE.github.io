@@ -18,7 +18,7 @@ My research is centered around gesture-based understanding and human-computer co
 
 
 Publications
-======
+------
 
 **Cross-modality Data Augmentation for End-to-End Sign Language Translation** <br>
   Authors: **Jinhui Ye**, Wenxiang Jiao, Xing Wang, Zhaopeng Tu, Hui Xiong <br>
@@ -30,3 +30,8 @@ Publications
   Authors: Haopeng Ren, Yi Cai, Yushi Zeng, **Jinhui Ye**, Ho-fung Leung,  Qing Li <br>
   TAC 2022. [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9882094&casa_token=H2dOk5uWLXgAAAAA:Ex7FLRmkurlYY1x2rThmKne_NadSVUiOH2QcCx5IekFMxYYhF0wgGaf9DOXqFQdtGZPJGT9VNCiCGYs) [[code]](https://github.com/Atrewin/CroDomainFSSA)
 
+Awards
+------
+
+* Outstanding Undergraduate Thesis in SCUT
+* National Scholarship in China
