@@ -81,10 +81,11 @@ analytics:
 # Site Author
 author:
   name             : "Jinhui Ye (叶劲辉)"
-  avatar           : "me.jpg"
+  avatar           : "bio-me.jpg"
   bio              : "M.Phil. Candidate in Artificial Intelligence @ HKUST(GZ)"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  github           : "JinhuiYE"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : #"http://yourfullgooglescholarurl.com"
   email            : "jye624@connect.hkust-gz.edu.cn"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
@@ -95,7 +96,6 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "JinhuiYE"
   google_plus      :
   keybase          :
   instagram        :
