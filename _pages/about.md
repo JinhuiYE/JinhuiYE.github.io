@@ -15,7 +15,11 @@ I am a committed researcher and AI enthusiast. I received my degree in [Software
 
 My research interests lie in the intersection of gesture-based understanding, perception and human-machine collaboration based on language. Previously, I interned at [Tencent AI Lab](https://ai.tencent.com/ailab/nlp/en/index.html){: .no-underline }, working on sign language translation in collaboration with [Xing Wang](http://xingwang4nlp.com/){: .no-underline } and [Wenxiang Jiao](https://wxjiao.github.io/){: .no-underline }. Currently, I'm part of the Multimodal Human-Computer Interaction Group at HKUST-GZ, focusing on multimodal human-computer interaction and collaboration, in partnership with PhD candidate [Weiyu Guo](https://guoweiyu.github.io/){: .no-underline }.
 
-My mission is to conduct impactful and beneficial research that aids in bridging the gap between humans and AI. I envision a future where AI is not just seamlessly integrated into our lives, but also interacts with us in a real-time and autonomous manner.
+Moving forward, I aim to make a significant impact by applying Language Model Learning (LLM) in various domains (LLM for X), expanding the boundaries of AI applications.
+
+<span style="color:red">I am currently exploring potential opportunities for internships and PhD positions.</span>
+
+[//]: # (My mission is to conduct impactful and beneficial research that aids in bridging the gap between humans and AI. I envision a future where AI is not just seamlessly integrated into our lives, but also interacts with us in a real-time and autonomous manner.)
 
 Publications
 ------
