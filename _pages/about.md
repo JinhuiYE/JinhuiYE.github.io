@@ -19,6 +19,7 @@ Moving forward, I aim to make a significant impact by applying Language Model Le
 
 <span style="color:red">I am currently exploring potential opportunities for internships and PhD positions.</span>
 
+
 [//]: # (My mission is to conduct impactful and beneficial research that aids in bridging the gap between humans and AI. I envision a future where AI is not just seamlessly integrated into our lives, but also interacts with us in a real-time and autonomous manner.)
 
 Publications
