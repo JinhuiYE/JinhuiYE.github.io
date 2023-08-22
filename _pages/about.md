@@ -25,10 +25,10 @@ Moving forward, I aim to make a significant impact by applying Language Model Le
 Publications
 ------
 **Spatial-Temporal Alignment Network for Action Recognition** <br>
-  Authors: **Jinhui Ye**, Wenxiang Jiao, Xing Wang, Zhaopeng Tu, Hui Xiong <br>
+  Authors: **Jinhui Ye**, Junwei Liang <br>
   Preprint 2023. [[arxiv]](https://arxiv.org/pdf/2308.09897.pdf) <br>
 **Cross-modality Data Augmentation for End-to-End Sign Language Translation** <br>
-  Authors: **Jinhui Ye**, Junwei Liang <br>
+  Authors: **Jinhui Ye**, Wenxiang Jiao, Xing Wang, Zhaopeng Tu, Hui Xiong <br>
   Preprint 2023. [[arxiv]](https://arxiv.org/abs/2305.11096) [[code]](https://github.com/Atrewin/SignXmDA) <br>
 **Scaling Back-Translation with Domain Text Generation for Sign Language Gloss Translation**  <br>
   Authors: **Jinhui Ye**, Wenxiang Jiao, Xing Wang, Zhaopeng Tu <br>
