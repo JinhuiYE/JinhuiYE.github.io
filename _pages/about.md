@@ -24,12 +24,13 @@ I envision a future where AI is not just seamlessly integrated into our lives, b
 
 News
 ------
-• 0928:
-Excited to announce that our two projects clinched 1st and 2nd places in the Human-Machine Interaction track of the Pazhou Algorithm Contest! We've been awarded a total of 120,000 RMB and look forward to a big celebratory dinner. 
-The relative works will be documented in upcoming papers. [link](https://mp.weixin.qq.com/s/_FuuvX1wKAW9dPBHi3yj8w)
+• **0928**:
+*Excited to announce that our two projects clinched 1st and 2nd places in the Human-Machine Interaction track of the Pazhou Algorithm Contest! We've been awarded a total of 120,000 RMB and look forward to a big celebratory dinner. 
+The relative works will be documented in upcoming papers.* [link](https://mp.weixin.qq.com/s/_FuuvX1wKAW9dPBHi3yj8w)
 
-• 0926:
-Participated in World Cleanup Day, collectively removing 17,970 items weighing 0.52 tons of marine debris. A fun and meaningful experience!
+[//]: # (• 0926:)
+
+[//]: # (Participated in World Cleanup Day, collectively removing 17,970 items weighing 0.52 tons of marine debris. A fun and meaningful experience!)
 
 • Before 08/30/2023: [...]
 
