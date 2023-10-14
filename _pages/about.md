@@ -50,10 +50,31 @@ Publications
   EACL 2023. [[paper]](https://arxiv.org/abs/2210.07054) [[code]](https://github.com/Atrewin/PGen) <br>
 **Aspect-Opinion Correlation Aware and Knowledge-Expansion Few Shot Cross-Domain Sentiment Classification** <br>
   Haopeng Ren, Yi Cai, Yushi Zeng, **Jinhui Ye**, Ho-fung Leung,  Qing Li <br>
-  TAC 2022. [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9882094&casa_token=H2dOk5uWLXgAAAAA:Ex7FLRmkurlYY1x2rThmKne_NadSVUiOH2QcCx5IekFMxYYhF0wgGaf9DOXqFQdtGZPJGT9VNCiCGYs) [[code]](https://github.com/Atrewin/CroDomainFSSA)
+  Transactions on Affective Computing 2022. [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9882094&casa_token=H2dOk5uWLXgAAAAA:Ex7FLRmkurlYY1x2rThmKne_NadSVUiOH2QcCx5IekFMxYYhF0wgGaf9DOXqFQdtGZPJGT9VNCiCGYs) [[code]](https://github.com/Atrewin/CroDomainFSSA)
 
 Awards
 ------
 
 • Outstanding Undergraduate Thesis in SCUT <br>
 • National Scholarship in China
+
+
+#!/bin/bash
+# 使用sinfo获取每个partition及其节点状态的列表
+sinfo --format="%R %T %N" | tail -n +2 | while read -r partition state nodes; do
+# 跳过状态为drain, down, 或 inval的partitions
+    if [[ $state == "drain" || $state == "down" || $state == "inval"
+]]; then
+continue
+fi
+echo ">>> Partition: $partition - State: $state <<<"
+
+# 使用scontrol show hostname转换为单独的节点名
+scontrol show hostname "$nodes" | while read -r node; do
+# 如果节点名中包含"gpu"，则执行nvidia-smi
+if [[ $node == *gpu* || $node == *bigmem* ]]; then
+            echo "======= Node: $node ======="
+            srun -p $partition -w $node -l nvidia-smi
+            echo ""
+fi done
+done
