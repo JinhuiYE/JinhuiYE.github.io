@@ -58,23 +58,3 @@ Awards
 • Outstanding Undergraduate Thesis in SCUT <br>
 • National Scholarship in China
 
-
-#!/bin/bash
-# 使用sinfo获取每个partition及其节点状态的列表
-sinfo --format="%R %T %N" | tail -n +2 | while read -r partition state nodes; do
-# 跳过状态为drain, down, 或 inval的partitions
-    if [[ $state == "drain" || $state == "down" || $state == "inval"
-]]; then
-continue
-fi
-echo ">>> Partition: $partition - State: $state <<<"
-
-# 使用scontrol show hostname转换为单独的节点名
-scontrol show hostname "$nodes" | while read -r node; do
-# 如果节点名中包含"gpu"，则执行nvidia-smi
-if [[ $node == *gpu* || $node == *bigmem* ]]; then
-            echo "======= Node: $node ======="
-            srun -p $partition -w $node -l nvidia-smi
-            echo ""
-fi done
-done
