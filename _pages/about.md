@@ -39,6 +39,9 @@ The relative works will be documented in upcoming papers.* [link](https://mp.wei
 
 Publications
 ------
+**GeoDeformer: Geometric Deformable Transformer for Action Recognition** <br>
+  **Jinhui Ye**, Jiaming Zhou, Hui Xiong, Junwei Liang <br>
+  Under Review <br>
 **Spatial-Temporal Alignment Network for Action Recognition** <br>
   **Jinhui Ye**, Junwei Liang <br>
   Preprint 2023. [[arxiv]](https://arxiv.org/pdf/2308.09897.pdf) <br>
