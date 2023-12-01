@@ -41,16 +41,16 @@ Publications
 ------
 **GeoDeformer: Geometric Deformable Transformer for Action Recognition** <br>
   **Jinhui Ye**, Jiaming Zhou, Hui Xiong, Junwei Liang <br>
-  Under Review <br>
+  Preprint 2023. [[arXiv]](https://arxiv.org/abs/2311.17975) <br>
 **Spatial-Temporal Alignment Network for Action Recognition** <br>
   **Jinhui Ye**, Junwei Liang <br>
-  Preprint 2023. [[arxiv]](https://arxiv.org/pdf/2308.09897.pdf) <br>
+  Preprint 2023. [[arXiv]](https://arxiv.org/pdf/2308.09897.pdf) <br>
 **Cross-modality Data Augmentation for End-to-End Sign Language Translation** <br>
   **Jinhui Ye**, Wenxiang Jiao, Xing Wang, Zhaopeng Tu, Hui Xiong <br>
-  EMNLP 2023. [[arxiv]](https://arxiv.org/abs/2305.11096) [[code]](https://github.com/Atrewin/SignXmDA) <br>
+  EMNLP 2023. [[arXiv]](https://arxiv.org/abs/2305.11096) [[code]](https://github.com/Atrewin/SignXmDA) <br>
 **Scaling Back-Translation with Domain Text Generation for Sign Language Gloss Translation**  <br>
   **Jinhui Ye**, Wenxiang Jiao, Xing Wang, Zhaopeng Tu <br>
-  EACL 2023. [[paper]](https://arxiv.org/abs/2210.07054) [[code]](https://github.com/Atrewin/PGen) <br>
+  EACL 2023. [[paper]](https://aclanthology.org/2023.eacl-main.34/) [[code]](https://github.com/Atrewin/PGen) <br>
 **Aspect-Opinion Correlation Aware and Knowledge-Expansion Few Shot Cross-Domain Sentiment Classification** <br>
   Haopeng Ren, Yi Cai, Yushi Zeng, **Jinhui Ye**, Ho-fung Leung,  Qing Li <br>
   Transactions on Affective Computing 2022. [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9882094&casa_token=H2dOk5uWLXgAAAAA:Ex7FLRmkurlYY1x2rThmKne_NadSVUiOH2QcCx5IekFMxYYhF0wgGaf9DOXqFQdtGZPJGT9VNCiCGYs) [[code]](https://github.com/Atrewin/CroDomainFSSA)
