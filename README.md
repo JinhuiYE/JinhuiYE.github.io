@@ -29,3 +29,38 @@ See more info at https://academicpages.github.io/
 There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
 
 To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+
+
+@inproceedings{fu2023token,
+  title={A Token-Level Contrastive Framework for Sign Language Translation},
+  author={Fu, Biao and Ye, Peigen and Zhang, Liang and Yu, Pei and Hu, Cong and Shi, Xiaodong and Chen, Yidong},
+  booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={1--5},
+  year={2023},
+  organization={IEEE}
+}
+
+@inproceedings{zhou2023gloss,
+  title={Gloss-free Sign Language Translation: Improving from Visual-Language Pretraining},
+  author={Zhou, Benjia and Chen, Zhigang and Clap{\'e}s, Albert and Wan, Jun and Liang, Yanyan and Escalera, Sergio and Lei, Zhen and Zhang, Du},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={20871--20881},
+  year={2023}
+}
+
+@inproceedings{gan2023contrastive,
+  title={Contrastive learning for sign language recognition and translation},
+  author={Gan, Shiwei and Yin, Yafeng and Jiang, Zhiwei and Xia, Kang and Xie, Lei and Lu, Sanglu},
+  booktitle={Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence, IJCAI-23},
+  pages={763--772},
+  year={2023}
+}
+
+@inproceedings{lee2023leveraging,
+  title={Leveraging Large Language Models With Vocabulary Sharing For Sign Language Translation},
+  author={Lee, Huije and Kim, Jung-Ho and Hwang, Eui Jun and Kim, Jaewoo and Park, Jong C},
+  booktitle={2023 IEEE International Conference on Acoustics, Speech, and Signal Processing Workshops (ICASSPW)},
+  pages={1--5},
+  year={2023},
+  organization={IEEE}
+}
