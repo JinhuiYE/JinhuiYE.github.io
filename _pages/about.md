@@ -16,7 +16,7 @@ I am a AI enthusiast. I received my degree in [Software Engineering from South C
 My research interests lie in the intersection of action perception, manipulation and human-robotics interaction based on language. 
 Previously, I interned at [Tencent AI Lab](https://ai.tencent.com/ailab/nlp/en/index.html){: .no-underline }, working on sign language translation in collaboration with [Xing Wang](http://xingwang4nlp.com/){: .no-underline } and [Wenxiang Jiao](https://wxjiao.github.io/){: .no-underline }. Currently, I'm part of the Multimodal Human-Computer Interaction Group at HKUST-GZ, focusing on multimodal human-computer interaction and collaboration, in partnership with PhD candidate [Weiyu Guo](https://guoweiyu.github.io/){: .no-underline }.
 
-Recently, I am doing internship in [Stanford Vision and Learning Lab](http://vision.stanford.edu/) working with the postdoc [Manling Li](https://limanling.github.io/) and Prof [Jiajun Wu](https://jiajunwu.com/).
+Recently, I am doing internship in [Stanford Vision and Learning Lab](http://vision.stanford.edu/){: .no-underline } working with the postdoc [Manling Li](https://limanling.github.io/){: .no-underline } and Prof [Jiajun Wu](https://jiajunwu.com/){: .no-underline }.
 
 Moving forward, I aim to make a significant impact by applying Language Model Learning (LLM) in various domains (LLM for X), like for human-robotics interaction.  Intuitively, I am particularly interested in efficiently mapping LLM into finite instruction sets, which can drive intelligent agents and create a real-world impact, somehow part of Embodied AI.
 I envision a future where AI is not just seamlessly integrated into our lives, but also interacts with us in a real-time and autonomous manner.
