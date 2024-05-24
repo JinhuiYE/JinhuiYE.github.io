@@ -21,7 +21,7 @@ Recently, I am doing internship in [Stanford Vision and Learning Lab](http://vis
 Moving forward, I aim to make a significant impact by applying Language Model Learning (LLM) in various domains (LLM for X), like for human-robotics interaction.  Intuitively, I am particularly interested in efficiently mapping LLM into finite instruction sets, which can drive intelligent agents and create a real-world impact, somehow part of Embodied AI.
 I envision a future where AI is not just seamlessly integrated into our lives, but also interacts with us in a real-time and autonomous manner.
 
-<span style="color:red">I am currently exploring potential opportunities for internships (start from Sept. 24) and 25 Fall PhD positions.</span>
+<span style="color:red">I am currently exploring potential opportunities for internships (paid or unpaid and time is also flexible for me) and 25 Fall PhD positions.</span>
 
 
 News
@@ -41,6 +41,11 @@ The relative works will be documented in upcoming papers.* [link](https://mp.wei
 
 Publications
 ------
+
+**SignCL: A Resentation Density Problem and Performance Drop in Sign Language Translation** <br>
+  **Jinhui Ye**, Xing Wang, Wenxiang Jiao, Junwei Liang, Hui Xiong <br>
+  Preprint 2024. [[arXiv]](https://arxiv.org/abs/2405.14312) <br>
+
 **GeoDeformer: Geometric Deformable Transformer for Action Recognition** <br>
   **Jinhui Ye**, Jiaming Zhou, Hui Xiong, Junwei Liang <br>
   Preprint 2023. [[arXiv]](https://arxiv.org/abs/2311.17975) <br>
