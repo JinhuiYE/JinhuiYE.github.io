@@ -42,7 +42,7 @@ The relative works will be documented in upcoming papers.* [link](https://mp.wei
 Publications
 ------
 
-**SignCL: A Resentation Density Problem and Performance Drop in Sign Language Translation** <br>
+**Improving Gloss-free Sign Language Translation by Reducing Representation Density** (Representation Density Problem and Performance Drop)<br>
   **Jinhui Ye**, Xing Wang, Wenxiang Jiao, Junwei Liang, Hui Xiong <br>
   Preprint 2024. [[arXiv]](https://arxiv.org/abs/2405.14312) <br>
 
