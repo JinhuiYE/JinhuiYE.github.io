@@ -4,7 +4,8 @@ main:
 #    url: /publications/
 
   - title: "CV"
-    url: /files/CV_JinhuiYE_0524.pdf
+    url: /files/CV_JinhuiYE.pdf
+#    url: /files/CV_JinhuiYE_0524.pdf
 
 #  - title: "Talks"
 #    url: /talks/
