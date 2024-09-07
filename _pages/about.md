@@ -23,7 +23,9 @@ Recently, I am doing internship in [Stanford Vision and Learning Lab](http://vis
 
 [//]: # (I envision a future where AI is not just seamlessly integrated into our lives, but also interacts with us in a real-time and autonomous manner.)
 
-<span style="color:red">I am currently exploring potential opportunities for internships (time is flexible for me) and 25 Fall PhD positions.</span>
+<span style="color:red"> ~~I am currently exploring potential opportunities for internships~~ I will do an on-site internship with Prof. [Yonatan](https://talkingtorobots.com/yonatanbisk.html)) at CMU for the next term and I am looking for PhD positions for Fall/Spring 2025. </span>
+
+
 
 
 News
