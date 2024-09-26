@@ -46,15 +46,16 @@ The relative works will be documented in upcoming papers.* [link](https://mp.wei
 Publications
 ------
 
-**Improving Gloss-free Sign Language Translation by Reducing Representation Density**<br>
-  **Jinhui Ye**, Xing Wang, Wenxiang Jiao, Junwei Liang, Hui Xiong <br>
-  Preprint 2024. [[arXiv]](https://arxiv.org/abs/2405.14312)  [[code]](https://github.com/JinhuiYE/SignCL) <br>
+
 **GeoDeformer: Geometric Deformable Transformer for Action Recognition** <br>
   **Jinhui Ye**, Jiaming Zhou, Hui Xiong, Junwei Liang <br>
   Preprint 2023. [[arXiv]](https://arxiv.org/abs/2311.17975) <br>
 **Spatial-Temporal Alignment Network for Action Recognition** <br>
   **Jinhui Ye**, Junwei Liang <br>
   Preprint 2023. [[arXiv]](https://arxiv.org/pdf/2308.09897.pdf) <br>
+**Improving Gloss-free Sign Language Translation by Reducing Representation Density**<br>
+  **Jinhui Ye**, Xing Wang, Wenxiang Jiao, Junwei Liang, Hui Xiong <br>
+  NeurIPS 2024. [[arXiv]](https://arxiv.org/abs/2405.14312)  [[code]](https://github.com/JinhuiYE/SignCL) <br>
 **Cross-modality Data Augmentation for End-to-End Sign Language Translation** <br>
   **Jinhui Ye**, Wenxiang Jiao, Xing Wang, Zhaopeng Tu, Hui Xiong <br>
   EMNLP 2023. [[arXiv]](https://arxiv.org/abs/2305.11096) [[code]](https://github.com/Atrewin/SignXmDA) <br>
