@@ -20,7 +20,6 @@ Recently, I am doing internship in [Stanford Vision and Learning Lab](http://vis
 
 [//]: # ()
 Moving forward, I aim to make a significant impact by connecting perception and reasoning in VLMs to robotic control.  Intuitively, I am particularly focused on efficiently mapping VLMs into finite instruction sets, which can drive physical agents. My ultimate goal is to advance intelligent systems that not only understand the world but can also interact with it in meaningful ways. 
-[//]: # (I envision a future where AI is not just seamlessly integrated into our lives, but also interacts with us in a real-time and autonomous manner.
 
 **~~I am currently exploring potential opportunities for internships~~ I will do an on-site internship with Prof. [Yonatan](https://talkingtorobots.com/yonatanbisk.html) at CMU for the next term and I am looking for PhD positions for Fall 2025.**
 
