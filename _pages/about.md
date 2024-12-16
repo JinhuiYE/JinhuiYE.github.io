@@ -19,9 +19,8 @@ Previously, I interned at [Tencent AI Lab](https://ai.tencent.com/ailab/nlp/en/i
 Recently, I am doing internship in [Stanford Vision and Learning Lab](http://vision.stanford.edu/){: .no-underline } working with the postdoc [Manling Li](https://limanling.github.io/){: .no-underline } and Prof [Jiajun Wu](https://jiajunwu.com/){: .no-underline }.
 
 [//]: # ()
-Moving forward, I aim to make a significant impact by applying Language Model Learning (LLM) in various domains (LLM for X), like for human-robotics interaction.  Intuitively, I am particularly interested in efficiently mapping LLM into finite instruction sets, which can drive intelligent agents and create a real-world impact, somehow part of Embodied AI.
-
-[//]: # (I envision a future where AI is not just seamlessly integrated into our lives, but also interacts with us in a real-time and autonomous manner.)
+Moving forward, I aim to make a significant impact by connecting perception and reasoning in VLMs to robotic control.  Intuitively, I am particularly focused on efficiently mapping VLMs into finite instruction sets, which can drive physical agents. My ultimate goal is to advance intelligent systems that not only understand the world but can also interact with it in meaningful ways. 
+[//]: # (I envision a future where AI is not just seamlessly integrated into our lives, but also interacts with us in a real-time and autonomous manner.
 
 **~~I am currently exploring potential opportunities for internships~~ I will do an on-site internship with Prof. [Yonatan](https://talkingtorobots.com/yonatanbisk.html) at CMU for the next term and I am looking for PhD positions for Fall 2025.**
 
