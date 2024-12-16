@@ -19,7 +19,7 @@ Previously, I interned at [Tencent AI Lab](https://ai.tencent.com/ailab/nlp/en/i
 Recently, I am doing internship in [Stanford Vision and Learning Lab](http://vision.stanford.edu/){: .no-underline } working with the postdoc [Manling Li](https://limanling.github.io/){: .no-underline } and Prof [Jiajun Wu](https://jiajunwu.com/){: .no-underline }.
 
 [//]: # ()
-[//]: # (Moving forward, I aim to make a significant impact by applying Language Model Learning &#40;LLM&#41; in various domains &#40;LLM for X&#41;, like for human-robotics interaction.  Intuitively, I am particularly interested in efficiently mapping LLM into finite instruction sets, which can drive intelligent agents and create a real-world impact, somehow part of Embodied AI.)
+Moving forward, I aim to make a significant impact by applying Language Model Learning (LLM) in various domains (LLM for X), like for human-robotics interaction.  Intuitively, I am particularly interested in efficiently mapping LLM into finite instruction sets, which can drive intelligent agents and create a real-world impact, somehow part of Embodied AI.
 
 [//]: # (I envision a future where AI is not just seamlessly integrated into our lives, but also interacts with us in a real-time and autonomous manner.)
 
