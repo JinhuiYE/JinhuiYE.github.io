@@ -64,6 +64,12 @@ Publications
   Haopeng Ren, Yi Cai, Yushi Zeng, **Jinhui Ye**, Ho-fung Leung,  Qing Li <br>
   Transactions on Affective Computing 2022. [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9882094&casa_token=H2dOk5uWLXgAAAAA:Ex7FLRmkurlYY1x2rThmKne_NadSVUiOH2QcCx5IekFMxYYhF0wgGaf9DOXqFQdtGZPJGT9VNCiCGYs) [[code]](https://github.com/Atrewin/CroDomainFSSA)
 
+Internship
+------
+• CMU LTI | Visiting Student | Sep. 2024 ‑ Present <br>
+• Stanford AI Lab |  Intern | Dec. 2023 ‑ Oct. 2024 <br>
+• Tencent AI Lab | Summer Intern | Aug. 2021 ‑ Aug. 2022
+
 Awards
 ------
 
