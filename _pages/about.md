@@ -47,8 +47,6 @@ Publications
 **SePer: Measure Retrieval Utility Through The Lens Of Semantic Perplexity Reduction**<br>
   Lu Dai, Yijie Xu, **Jinhui Ye**, Hao Liu, Hui Xiong <br>
   ICLR 2025<span style="color:red;">(spotlight)</span> . [[Openreview]](https://openreview.net/forum?id=ixMBnOhFGd2)  <br>
-
-
 **Improving Gloss-free Sign Language Translation by Reducing Representation Density**<br>
   **Jinhui Ye**, Xing Wang, Wenxiang Jiao, Junwei Liang, Hui Xiong <br>
   NeurIPS 2024. [[arXiv]](https://arxiv.org/abs/2405.14312)  [[code]](https://github.com/JinhuiYE/SignCL) <br>
