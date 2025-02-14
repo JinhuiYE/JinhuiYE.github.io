@@ -44,13 +44,11 @@ The relative works will be documented in upcoming papers.* [link](https://mp.wei
 Publications
 ------
 
+**SePer: Measure Retrieval Utility Through The Lens Of Semantic Perplexity Reduction**<br>
+  Lu Dai, Yijie Xu, **Jinhui Ye**, Hao Liu, Hui Xiong <br>
+  ICLR 2025<span style="color:red;">(spotlight)</span> . [[Openreview]](https://openreview.net/forum?id=ixMBnOhFGd2)  <br>
 
-**GeoDeformer: Geometric Deformable Transformer for Action Recognition** <br>
-  **Jinhui Ye**, Jiaming Zhou, Hui Xiong, Junwei Liang <br>
-  Preprint 2023. [[arXiv]](https://arxiv.org/abs/2311.17975) <br>
-**Spatial-Temporal Alignment Network for Action Recognition** <br>
-  **Jinhui Ye**, Junwei Liang <br>
-  Preprint 2023. [[arXiv]](https://arxiv.org/pdf/2308.09897.pdf) <br>
+
 **Improving Gloss-free Sign Language Translation by Reducing Representation Density**<br>
   **Jinhui Ye**, Xing Wang, Wenxiang Jiao, Junwei Liang, Hui Xiong <br>
   NeurIPS 2024. [[arXiv]](https://arxiv.org/abs/2405.14312)  [[code]](https://github.com/JinhuiYE/SignCL) <br>
@@ -64,6 +62,15 @@ Publications
   Haopeng Ren, Yi Cai, Yushi Zeng, **Jinhui Ye**, Ho-fung Leung,  Qing Li <br>
   Transactions on Affective Computing 2022. [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9882094&casa_token=H2dOk5uWLXgAAAAA:Ex7FLRmkurlYY1x2rThmKne_NadSVUiOH2QcCx5IekFMxYYhF0wgGaf9DOXqFQdtGZPJGT9VNCiCGYs) [[code]](https://github.com/Atrewin/CroDomainFSSA)
 
+
+On Processing Papers
+------
+**GeoDeformer: Geometric Deformable Transformer for Action Recognition** <br>
+  **Jinhui Ye**, Jiaming Zhou, Hui Xiong, Junwei Liang <br>
+  Preprint 2023. [[arXiv]](https://arxiv.org/abs/2311.17975) <br>
+**Spatial-Temporal Alignment Network for Action Recognition** <br>
+  **Jinhui Ye**, Junwei Liang <br>
+  Preprint 2023. [[arXiv]](https://arxiv.org/pdf/2308.09897.pdf) <br>
 Internship
 ------
 • CMU LTI | Visiting Student | Sep. 2024 ‑ Present <br>
