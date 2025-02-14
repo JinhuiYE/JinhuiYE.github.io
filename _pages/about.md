@@ -69,6 +69,7 @@ On Processing Papers
 **Spatial-Temporal Alignment Network for Action Recognition** <br>
   **Jinhui Ye**, Junwei Liang <br>
   Preprint 2023. [[arXiv]](https://arxiv.org/pdf/2308.09897.pdf) <br>
+
 Internship
 ------
 • CMU LTI | Visiting Student | Sep. 2024 ‑ Present <br>
