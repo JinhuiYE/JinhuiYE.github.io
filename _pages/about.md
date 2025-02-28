@@ -43,7 +43,9 @@ The relative works will be documented in upcoming papers.* [link](https://mp.wei
 
 Publications
 ------
-
+**LongvideoHaystack: Re-thinking Temporal Search for Long-Form Video Understandin**<br>
+  **Jinhui Ye**, Zihan Wang, Haosen Sun, Keshigeyan Chandrasegaran, Zane Durante, Cristobal Eyzaguirre, Yonatan Bisk, Juan Carlos Niebles, Ehsan Adeli, Li Fei-Fei, Jiajun Wu, Manling Li <br>
+  CVPR 2025 . [[Project Page]](https://longvideohaystack.github.io/) [[Dataset]](https://huggingface.co/datasets/LVHaystack/LongVideoHaystack) Paper & Code coming soon <br>
 **SePer: Measure Retrieval Utility Through The Lens Of Semantic Perplexity Reduction**<br>
   Lu Dai, Yijie Xu, **Jinhui Ye**, Hao Liu, Hui Xiong <br>
   ICLR 2025<span style="color:red;">(spotlight)</span> . [[Openreview]](https://openreview.net/forum?id=ixMBnOhFGd2)  <br>
