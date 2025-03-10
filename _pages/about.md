@@ -11,19 +11,17 @@ redirect_from:
 
 {% include base_path %}
 
-Here is Jinhui!. I received my degree in [Software Engineering from South China University of Technology](http://www2.scut.edu.cn/sse/){: .no-underline } in 2022. Currently, I'm pursuing a MPhil degree at The [Hong Kong University of Science and Technology (Guangzhou)](https://hkust-gz.edu.cn/academics/four-hubs/information-hub/artificial-intelligence){: .no-underline } supervised By [Prof. Hui Xiong](https://scholar.google.com/citations?user=cVDF1tkAAAAJ&hl=zh-CN&oi=ao){: .no-underline } and [Junwei Liang](https://junweiliang.me/index.html){: .no-underline }.
+Here is Jinhui, an incoming PhD student at [HKUST](https://seng.hkust.edu.hk/){: .no-underline} and supervised by Prof. [Jiaya Jia](https://jiaya.me/home). 
+My research interests lie at the intersection of action perception, manipulation, and language-based human-robot interaction.
 
-My research interests lie in the intersection of action perception, manipulation and human-robotics interaction based on language. 
-Previously, I interned at [Tencent AI Lab](https://ai.tencent.com/ailab/nlp/en/index.html){: .no-underline }, working on sign language translation in collaboration with [Xing Wang](http://xingwang4nlp.com/){: .no-underline } and [Wenxiang Jiao](https://wxjiao.github.io/){: .no-underline }. Currently, I'm part of the Multimodal Human-Computer Interaction Group at HKUST-GZ, focusing on multimodal human-computer interaction and collaboration, in partnership with PhD candidate [Weiyu Guo](https://guoweiyu.github.io/){: .no-underline }.
+Previously, I obtained my degree from [South China University of Technology](http://www2.scut.edu.cn/sse/){: .no-underline} and pursued an MPhil at [The Hong Kong University of Science and Technology (Guangzhou)](https://hkust-gz.edu.cn/academics/four-hubs/information-hub/artificial-intelligence){: .no-underline} under the guidance of [Prof. Hui Xiong](https://scholar.google.com/citations?user=cVDF1tkAAAAJ&hl=zh-CN&oi=ao){: .no-underline} and [Junwei Liang](https://junweiliang.me/index.html){: .no-underline}.
+I have also had the opportunity to intern at several prestigious institutions:  
+- At [Tencent AI Lab](https://ai.tencent.com/ailab/nlp/en/index.html){: .no-underline}, I worked on sign language translation in collaboration with [Xing Wang](http://xingwang4nlp.com/){: .no-underline} and [Wenxiang Jiao](https://wxjiao.github.io/){: .no-underline}.  
+- At [Stanford Vision and Learning Lab](http://vision.stanford.edu/){: .no-underline}, I collaborated with Prof [Manling Li](https://limanling.github.io/){: .no-underline}, Prof. [Jiajun Wu](https://jiajunwu.com/){: .no-underline} and Prof. [Li Fei-Fei](https://profiles.stanford.edu/fei-fei-li){: .no-underline}.  
+- At [CMU LIT](https://www.lti.cs.cmu.edu/){: .no-underline}, I worked with Prof. [Yonatan Bisk](https://talkingtorobots.com/yonatanbisk.html){: .no-underline} on Embodied-RAG.
 
-Recently, I am doing internship in [Stanford Vision and Learning Lab](http://vision.stanford.edu/){: .no-underline } working with the postdoc [Manling Li](https://limanling.github.io/){: .no-underline } and Prof [Jiajun Wu](https://jiajunwu.com/){: .no-underline }.
-
-[//]: # ()
-Moving forward, I aim to make a significant impact by connecting perception and reasoning in VLMs to robotic control.  Intuitively, I am particularly focused on efficiently mapping VLMs into finite instruction sets, which can drive physical agents. My ultimate goal is to advance intelligent systems that not only understand the world but can also interact with it in meaningful ways. 
-
-**~~I am currently exploring potential opportunities for internships~~ I will do an on-site internship with Prof. [Yonatan](https://talkingtorobots.com/yonatanbisk.html) at CMU for the next term and I am looking for PhD positions for Fall 2025.**
-
-
+Recently, I have been interning at [Shanghai AI Lab](https://www.shlab.org.cn/){: .no-underline} with Dr. [Yilun Chen](https://yilunchen.com/about/){: .no-underline}, where our efforts are focused on aligning cognition and action within a Vision-Language-Action (VLA) framework. 
+For my PhD, I plan to further explore this topic by developing a unified VLA model—a concept encapsulated in the Chinese phrase "知行合一" (the unity of knowledge and action, where a robot "does what it knows and knows what it is doing"). I am deeply passionate about this area and believe it holds great promise for both advancing research and enriching my personal philosophy. I welcome discussions and collaboration on these topics, so please feel free to reach out via email if you're interested.
 
 
 News
