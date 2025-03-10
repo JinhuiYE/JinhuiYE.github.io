@@ -11,7 +11,7 @@ redirect_from:
 
 {% include base_path %}
 
-Here is Jinhui, an incoming PhD student at [HKUST](https://seng.hkust.edu.hk/){: .no-underline} and supervised by Prof. [Jiaya Jia](https://jiaya.me/home). 
+Here is Jinhui (叶劲辉), an incoming PhD student at [HKUST](https://seng.hkust.edu.hk/){: .no-underline} and supervised by Prof. [Jiaya Jia](https://jiaya.me/home). 
 My research interests lie at the intersection of action perception, manipulation, and language-based human-robot interaction.
 
 Previously, I obtained my degree from [South China University of Technology](http://www2.scut.edu.cn/sse/){: .no-underline} and pursued an MPhil at [The Hong Kong University of Science and Technology (Guangzhou)](https://hkust-gz.edu.cn/academics/four-hubs/information-hub/artificial-intelligence){: .no-underline} under the guidance of [Prof. Hui Xiong](https://scholar.google.com/citations?user=cVDF1tkAAAAJ&hl=zh-CN&oi=ao){: .no-underline} and [Junwei Liang](https://junweiliang.me/index.html){: .no-underline}.
