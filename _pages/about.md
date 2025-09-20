@@ -46,7 +46,7 @@ Publications
   Chao Wang, Yixin Song, **Jinhui Ye**, Chuan Qin, Dazhong Shen, Lingfeng Liu, Xiang Wang, Yanyong Zhang  <br>
   NeurIPS 2025. [[paper]](https://openreview.net/pdf?id=loznSxLomv)<br>
 **Logic-in-Frames: Dynamic Keyframe Search via Visual Semantic-Logical Verification for Long Video Understanding**<br>
-  Weiyu Guo, Ziyang Chen, Shaoguang Wang, Jianxiang He, Yijie Xu, Jinhui Ye, Ying Sun, Hui Xiong  <br>
+  Weiyu Guo, Ziyang Chen, Shaoguang Wang, Jianxiang He, Yijie Xu, **Jinhui Ye**, Ying Sun, Hui Xiong  <br>
   NeurIPS 2025. [[paper]](https://openreview.net/forum?id=yONFNHGoeP)<br>
 **MolErr2Fix: Benchmarking LLM Trustworthiness in Chemistry via Modular Error Detection, Localization, Explanation, and Revision**<br>
   Yuyang Wu, **Jinhui Ye**, Shuhao Zhang, Lu Dai, Yonatan Bisk, Olexandr Isayev <br>
