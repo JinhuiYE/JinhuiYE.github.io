@@ -41,9 +41,19 @@ The relative works will be documented in upcoming papers.* [link](https://mp.wei
 
 Publications
 ------
+
+**FACE: A general Framework for Mapping Collaborative Filtering Embeddings into LLM Tokens**<br>
+  Chao Wang, Yixin Song, **Jinhui Ye**, Chuan Qin, Dazhong Shen, Lingfeng Liu, Xiang Wang, Yanyong Zhang  <br>
+  NeurIPS 2025. [[paper]](https://openreview.net/pdf?id=loznSxLomv)<br>
+**Logic-in-Frames: Dynamic Keyframe Search via Visual Semantic-Logical Verification for Long Video Understanding**<br>
+  Weiyu Guo, Ziyang Chen, Shaoguang Wang, Jianxiang He, Yijie Xu, Jinhui Ye, Ying Sun, Hui Xiong  <br>
+  NeurIPS 2025. [[paper]](https://openreview.net/forum?id=yONFNHGoeP)<br>
+**MolErr2Fix: Benchmarking LLM Trustworthiness in Chemistry via Modular Error Detection, Localization, Explanation, and Revision**<br>
+  Yuyang Wu, **Jinhui Ye**, Shuhao Zhang, Lu Dai, Yonatan Bisk, Olexandr Isayev <br>
+  ICLR 2025<span style="color:red;">(Oral)</span> . [[paper]](https://arxiv.org/pdf/2509.00063)<br>
 **LongvideoHaystack: Re-thinking Temporal Search for Long-Form Video Understandin**<br>
   **Jinhui Ye**, Zihan Wang, Haosen Sun, Keshigeyan Chandrasegaran, Zane Durante, Cristobal Eyzaguirre, Yonatan Bisk, Juan Carlos Niebles, Ehsan Adeli, Li Fei-Fei, Jiajun Wu, Manling Li <br>
-  CVPR 2025 . [[Project Page]](https://longvideohaystack.github.io/) [[Dataset]](https://huggingface.co/datasets/LVHaystack/LongVideoHaystack) Paper & Code coming soon <br>
+  CVPR 2025 . [[Project Page]](https://longvideohaystack.github.io/) [[Dataset]](https://huggingface.co/datasets/LVHaystack/LongVideoHaystack) <br>
 **SePer: Measure Retrieval Utility Through The Lens Of Semantic Perplexity Reduction**<br>
   Lu Dai, Yijie Xu, **Jinhui Ye**, Hao Liu, Hui Xiong <br>
   ICLR 2025<span style="color:red;">(spotlight)</span> . [[Openreview]](https://openreview.net/forum?id=ixMBnOhFGd2)  <br>
