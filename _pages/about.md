@@ -50,7 +50,7 @@ Publications
   NeurIPS 2025. [[paper]](https://openreview.net/forum?id=yONFNHGoeP)<br>
 **MolErr2Fix: Benchmarking LLM Trustworthiness in Chemistry via Modular Error Detection, Localization, Explanation, and Revision**<br>
   Yuyang Wu, **Jinhui Ye**, Shuhao Zhang, Lu Dai, Yonatan Bisk, Olexandr Isayev <br>
-  ICLR 2025<span style="color:red;">(Oral)</span> . [[paper]](https://arxiv.org/pdf/2509.00063)<br>
+  EMNLP 2025<span style="color:red;">(Oral)</span> . [[paper]](https://arxiv.org/pdf/2509.00063)<br>
 **LongvideoHaystack: Re-thinking Temporal Search for Long-Form Video Understandin**<br>
   **Jinhui Ye**, Zihan Wang, Haosen Sun, Keshigeyan Chandrasegaran, Zane Durante, Cristobal Eyzaguirre, Yonatan Bisk, Juan Carlos Niebles, Ehsan Adeli, Li Fei-Fei, Jiajun Wu, Manling Li <br>
   CVPR 2025 . [[Project Page]](https://longvideohaystack.github.io/) [[Dataset]](https://huggingface.co/datasets/LVHaystack/LongVideoHaystack) <br>
