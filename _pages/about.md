@@ -42,6 +42,10 @@ The relative works will be documented in upcoming papers.* [link](https://mp.wei
 Publications
 ------
 
+
+**InternVLA-M1:  A Spatially Grounded Foundation Model for Generalist Robot Policy**<br>
+  Main code contributor. 
+  Technical Report 2025. [[project page]](https://internrobotics.github.io/internvla-m1.github.io/)<br>
 **FACE: A general Framework for Mapping Collaborative Filtering Embeddings into LLM Tokens**<br>
   Chao Wang, Yixin Song, **Jinhui Ye**, Chuan Qin, Dazhong Shen, Lingfeng Liu, Xiang Wang, Yanyong Zhang  <br>
   NeurIPS 2025. [[paper]](https://openreview.net/pdf?id=loznSxLomv)<br>
