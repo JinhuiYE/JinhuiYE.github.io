@@ -41,7 +41,7 @@ The relative works will be documented in upcoming papers.* [link](https://mp.wei
 
 Publications
 ------
-**StarVLA**: A Lego-like Codebase for Vision-Language-Action Model Developing
+**StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing**<br>
   Main code contributor, VLMs-To-VLAs. 
   Open Source Project 2025. [[project page]](https://github.com/starVLA/starVLA)<br>
 **InternVLA-M1:  A Spatially Grounded Foundation Model for Generalist Robot Policy**<br>
