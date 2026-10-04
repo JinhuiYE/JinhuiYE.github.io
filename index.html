@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jinhui Ye — researcher in embodied intelligence, vision-language-action models, and long-form video understanding.">
+    <meta name="theme-color" content="#f3f5f2">
+    <meta property="og:title" content="Jinhui Ye — Embodied Intelligence Researcher">
+    <meta property="og:description" content="Research in perception, memory, and action for generalist robots.">
+    <meta property="og:image" content="assets/images/jinhui-ye.jpg">
+    <title>Jinhui Ye · Embodied Intelligence</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#about" aria-label="Jinhui Ye, home">
+        <span>JH</span>
+        <small>RESEARCH / 2026</small>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#awards">Awards</a>
+        <a href="blog/">Blog</a>
+        <a href="talks/">Talks</a>
+        <a class="nav-cv" href="cv/">CV ↗</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="profile-section" id="about">
+        <aside class="profile-card">
+          <div class="portrait-wrap">
+            <img src="assets/images/jinhui-ye.jpg" alt="Jinhui Ye with two alpacas" width="2105" height="2124">
+            <span class="availability" aria-label="Open to collaboration"></span>
+          </div>
+          <div class="profile-heading">
+            <h1>Jinhui Ye</h1>
+            <p lang="zh">叶劲辉</p>
+          </div>
+          <p class="profile-role">PhD student @ HKUST</p>
+          <div class="profile-links" aria-label="Profile links">
+            <a href="mailto:jye624@connect.hkust-gz.edu.cn">Email</a>
+            <a href="https://scholar.google.com/citations?user=RpXhJu0AAAAJ&hl=en" target="_blank" rel="noreferrer">Scholar</a>
+            <a href="https://github.com/JinhuiYE" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://twitter.com/JinhuiYE" target="_blank" rel="noreferrer">X</a>
+          </div>
+          <div class="interest-block">
+            <span>Research interests</span>
+            <div>
+              <b>Vision-Language-Action</b>
+              <b>Robot Manipulation</b>
+              <b>Action Perception</b>
+              <b>Embodied Memory</b>
+            </div>
+          </div>
+          <blockquote>
+            <strong lang="zh">知行合一</strong>
+            <span>Action aligns with knowledge.</span>
+          </blockquote>
+        </aside>
+
+        <div class="profile-main">
+          <p class="hello">Hello! I’m Jinhui <span aria-hidden="true">↘</span></p>
+          <h2>I build learning systems that connect <em>what robots know</em> with what they do.</h2>
+          <div class="bio-copy">
+            <p>
+              I am a PhD student at
+              <a href="https://seng.hkust.edu.hk/" target="_blank" rel="noreferrer">The Hong Kong University of Science and Technology</a>,
+              supervised by <a href="https://jiaya.me/home" target="_blank" rel="noreferrer">Prof. Jiaya Jia</a>.
+              My research focuses on embodied intelligence, vision-language-action models, and generalist robot learning.
+            </p>
+            <p>
+              Previously, I completed an MPhil at HKUST(GZ), advised by
+              <a href="https://scholar.google.com/citations?user=cVDF1tkAAAAJ" target="_blank" rel="noreferrer">Prof. Hui Xiong</a>
+              and <a href="https://junweiliang.me/" target="_blank" rel="noreferrer">Prof. Junwei Liang</a>,
+              after studying software engineering at South China University of Technology.
+            </p>
+            <p>
+              I initiated and maintain <a href="https://github.com/starVLA/starVLA" target="_blank" rel="noreferrer">StarVLA</a>,
+              an open-source framework for building, training, and evaluating VLA models.
+              I have also worked with Alibaba’s Qwen team, Shanghai AI Lab, CMU LTI, Stanford Vision &amp; Learning Lab, and Tencent AI Lab.
+            </p>
+          </div>
+          <section class="research-showcase" aria-label="Featured research demos">
+            <div class="showcase-heading">
+              <p class="section-label">Research in action</p>
+              <div class="showcase-tabs" role="tablist" aria-label="Choose a research project">
+                <button type="button" id="tab-qwen" role="tab" aria-selected="true" aria-controls="demo-qwen" data-demo="qwen">Qwen-VLA</button>
+                <button type="button" id="tab-intern" role="tab" aria-selected="false" aria-controls="demo-intern" data-demo="intern" tabindex="-1">InternVLA-M1</button>
+              </div>
+            </div>
+            <article class="current-work" id="demo-qwen" role="tabpanel" aria-labelledby="tab-qwen">
+              <div class="current-work-copy">
+                <p class="section-label">Alibaba · Qwen</p>
+                <h3>Qwen-VLA</h3>
+                <p>One model across tasks, environments, and robot embodiments.</p>
+                <div class="demo-links">
+                  <a href="https://qwen.ai/blog?id=qwenvla" target="_blank" rel="noreferrer">Project ↗</a>
+                  <a href="https://arxiv.org/abs/2605.30280" target="_blank" rel="noreferrer">Paper ↗</a>
+                </div>
+              </div>
+              <div class="current-work-media">
+                <video muted loop playsinline controls preload="none" poster="assets/images/qwen-vla.png" aria-label="Qwen-VLA robot manipulation demo" data-src="https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen-VLA/demo.mp4">
+                  <source src="https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen-VLA/demo.mp4" type="video/mp4">
+                </video>
+                <button class="video-control" type="button" aria-label="Play Qwen-VLA demo" hidden><span aria-hidden="true">▶</span></button>
+              </div>
+            </article>
+            <article class="current-work" id="demo-intern" hidden role="tabpanel" aria-labelledby="tab-intern">
+              <div class="current-work-copy">
+                <p class="section-label">Shanghai AI Lab</p>
+                <h3>InternVLA-M1</h3>
+                <p>A generalist model for spatially grounded robot manipulation.</p>
+                <div class="demo-links">
+                  <a href="https://internrobotics.github.io/internvla-m1.github.io/" target="_blank" rel="noreferrer">Project ↗</a>
+                  <a href="https://openreview.net/forum?id=eKhOrQWAVJ" target="_blank" rel="noreferrer">Paper ↗</a>
+                </div>
+              </div>
+              <div class="current-work-media">
+                <video muted loop playsinline controls preload="none" poster="assets/images/st4vla.png" aria-label="InternVLA-M1 robot manipulation demo" data-src="assets/video/internvla-m1-teaser.mp4">
+                  <source src="assets/video/internvla-m1-teaser.mp4" type="video/mp4">
+                </video>
+                <button class="video-control" type="button" aria-label="Play InternVLA-M1 demo" hidden><span aria-hidden="true">▶</span></button>
+              </div>
+            </article>
+            <div class="showcase-footer">
+              <a href="#publications">All publications <span aria-hidden="true">↓</span></a>
+              <a href="mailto:jye624@connect.hkust-gz.edu.cn">Let’s talk research <span aria-hidden="true">↗</span></a>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="content-section news-section" id="news" aria-labelledby="news-title">
+        <div class="section-title">
+          <p class="section-label">Latest updates</p>
+          <h2 id="news-title">News</h2>
+        </div>
+        <div class="news-feed">
+          <div class="news-list" id="news-list" tabindex="0" role="region" aria-label="News archive, scroll for older updates">
+            <article><time datetime="2026-09">2026.09</time><p><strong>StarVLA-α</strong> at ECCV 2026.</p><a href="#paper-starvla-alpha">Paper ↓</a></article>
+            <article><time datetime="2026-05">2026.05</time><p><strong>Qwen-VLA</strong> technical report released.</p><a href="https://arxiv.org/abs/2605.30280" target="_blank" rel="noreferrer">Read ↗</a></article>
+            <article><time datetime="2026-04">2026.04</time><p><strong>ST4VLA</strong> at ICLR 2026; the <strong>StarVLA</strong> infrastructure report is now on arXiv.</p><a href="#paper-st4vla">Papers ↓</a></article>
+            <article><time datetime="2026-03">2026.03</time><p><strong>StarVLA</strong> named an EAI-100 Top 10 Open-Source Project for 2025.</p><a href="https://modelscope.cn/brand/view/EAI-100" target="_blank" rel="noreferrer">List ↗</a></article>
+            <article><time datetime="2025-12">2025.12</time><p><strong>FACE</strong> and <strong>Logic-in-Frames</strong> at NeurIPS 2025.</p><a href="#paper-face">Papers ↓</a></article>
+            <article><time datetime="2025-11">2025.11</time><p><strong>MolErr2Fix</strong> · Oral presentation at EMNLP 2025.</p><a href="https://aclanthology.org/2025.emnlp-main.977/" target="_blank" rel="noreferrer">Paper ↗</a></article>
+            <article><time datetime="2025-06">2025.06</time><p><strong>LongVideoHaystack / T*</strong> at CVPR 2025.</p><a href="https://longvideohaystack.github.io/" target="_blank" rel="noreferrer">Project ↗</a></article>
+            <article><time datetime="2025-04">2025.04</time><p><strong>SePer</strong> · Spotlight at ICLR 2025.</p><a href="https://openreview.net/forum?id=ixMBnOhFGd" target="_blank" rel="noreferrer">Paper ↗</a></article>
+          </div>
+          <div class="news-controls"><span>Scroll for earlier updates</span><button type="button" class="text-button" aria-expanded="false" aria-controls="news-list" id="news-expand" hidden>Show all ↓</button></div>
+        </div>
+      </section>
+
+      <section class="content-section publications-section" id="publications" aria-labelledby="publications-title">
+        <div class="section-title publication-heading">
+          <div>
+            <p class="section-label">Research output</p>
+            <h2 id="publications-title">Publications</h2>
+          </div>
+          <div>
+            <span>* Equal contribution</span>
+            <a href="https://scholar.google.com/citations?user=RpXhJu0AAAAJ&hl=en" target="_blank" rel="noreferrer">Full list on Scholar ↗</a>
+          </div>
+        </div>
+
+        <div class="publication-tools" hidden>
+          <div class="publication-filters" role="group" aria-label="Filter publications by research area">
+            <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter" type="button" data-filter="vla" aria-pressed="false">VLA &amp; robotics</button>
+            <button class="filter" type="button" data-filter="video" aria-pressed="false">Video understanding</button>
+            <button class="filter" type="button" data-filter="language" aria-pressed="false">Language &amp; LLMs</button>
+          </div>
+          <p class="publication-count" role="status" aria-live="polite"></p>
+        </div>
+        <div class="publication-list">
+          <!-- PUBLICATIONS:START -->
+          <article class="publication-item reveal" id="paper-starvla-alpha" data-category="vla">
+            <a class="pub-visual" href="assets/images/starvla-alpha.png" data-lightbox aria-label="Enlarge figure for StarVLA-α">
+              <img src="assets/images/starvla-alpha.png" alt="StarVLA-alpha compares VLA designs under a unified training and evaluation framework" loading="lazy" width="720" height="480">
+              <span class="image-hint" aria-hidden="true">View figure ⤢</span>
+            </a>
+            <div class="pub-copy">
+              <div class="pub-topline"><span>2026</span><b>ECCV</b><span class="pub-shortname">StarVLA-α</span></div>
+              <h3><a href="https://arxiv.org/abs/2604.11757" target="_blank" rel="noreferrer">Less is More: Reducing Complexity in Vision-Language-Action Systems</a></h3>
+              <p class="pub-authors"><strong>Jinhui Ye</strong><sup>*</sup>, Ning Gao<sup>*</sup>, Senqiao Yang, Jinliang Zheng, Zixuan Wang, Yuxin Chen, Pengguang Chen, Yilun Chen, Shu Liu, Jiaya Jia</p>
+              <p>A simple VLA baseline for studying action modeling, robot pretraining, and interface design under controlled conditions.</p>
+              <div class="pub-links"><a href="https://arxiv.org/abs/2604.11757" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/starVLA/starVLA" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a><a href="https://starvla.github.io/" target="_blank" rel="noreferrer">Project <span aria-hidden="true">↗</span></a><a href="https://eccv.ecva.net/virtual/2026/poster/3351" target="_blank" rel="noreferrer">Conference <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="publication-item reveal" id="paper-qwen-vla" data-category="vla">
+            <a class="pub-visual" href="assets/images/qwen-vla.png" data-lightbox aria-label="Enlarge figure for Qwen-VLA">
+              <img src="assets/images/qwen-vla.png" alt="Qwen-VLA overview of a unified embodied model" loading="lazy" width="720" height="480">
+              <span class="image-hint" aria-hidden="true">View figure ⤢</span>
+            </a>
+            <div class="pub-copy">
+              <div class="pub-topline"><span>2026</span><b>Technical Report</b><span class="pub-shortname">Qwen-VLA</span></div>
+              <h3><a href="https://arxiv.org/abs/2605.30280" target="_blank" rel="noreferrer">Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments</a></h3>
+              <p class="pub-authors">Qiuyue Wang, Mingsheng Li, Jian Guan, <strong>Jinhui Ye</strong>, Sicheng Xie, Yitao Liu, et al.</p>
+              <p>A generalist policy across robot embodiments and tasks. My work focused on training and evaluation infrastructure.</p>
+              <div class="pub-links"><a href="https://arxiv.org/abs/2605.30280" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/QwenLM/Qwen-VLA" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a><a href="https://qwen.ai/blog?id=qwenvla" target="_blank" rel="noreferrer">Project <span aria-hidden="true">↗</span></a><a href="https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen-VLA/demo.mp4" target="_blank" rel="noreferrer">Demo <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="publication-item reveal" id="paper-st4vla" data-category="vla">
+            <a class="pub-visual" href="assets/images/st4vla.png" data-lightbox aria-label="Enlarge figure for ST4VLA">
+              <img src="assets/images/st4vla.png" alt="ST4VLA uses spatial grounding to guide robot action learning" loading="lazy" width="720" height="480">
+              <span class="image-hint" aria-hidden="true">View figure ⤢</span>
+            </a>
+            <div class="pub-copy">
+              <div class="pub-topline"><span>2026</span><b>ICLR</b><span class="pub-shortname">ST4VLA</span></div>
+              <h3><a href="https://openreview.net/forum?id=eKhOrQWAVJ" target="_blank" rel="noreferrer">ST4VLA: Spatially Guided Training for Vision-Language-Action Model</a></h3>
+              <p class="pub-authors"><strong>Jinhui Ye</strong><sup>*</sup>, Fangjing Wang<sup>*</sup>, Ning Gao<sup>*</sup>, Junqiu Yu<sup>*</sup>, Yangkun Zhu, Bin Wang, Jinyu Zhang, Weiyang Jin, Yanwei Fu, Feng Zheng, Yilun Chen, Jiangmiao Pang</p>
+              <p>Spatially guided training connects VLM grounding with action learning. The ICLR version of InternVLA-M1.</p>
+              <div class="pub-links"><a href="https://openreview.net/forum?id=eKhOrQWAVJ" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/InternRobotics/InternVLA-M1" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a><a href="https://internrobotics.github.io/internvla-m1.github.io/" target="_blank" rel="noreferrer">Project <span aria-hidden="true">↗</span></a><a href="https://huggingface.co/datasets/InternRobotics/InternData-M1" target="_blank" rel="noreferrer">Dataset <span aria-hidden="true">↗</span></a><a href="https://arxiv.org/abs/2510.13778" target="_blank" rel="noreferrer">Technical report <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="publication-item reveal" id="paper-starvla" data-category="vla">
+            <a class="pub-visual" href="assets/images/starvla-overview.png" data-lightbox aria-label="Enlarge figure for StarVLA">
+              <img src="assets/images/starvla-overview.png" alt="StarVLA modular framework for model backbones, action heads, training, and evaluation" loading="lazy" width="720" height="480">
+              <span class="image-hint" aria-hidden="true">View figure ⤢</span>
+            </a>
+            <div class="pub-copy">
+              <div class="pub-topline"><span>2026</span><b>Technical Report</b><span class="pub-shortname">StarVLA</span></div>
+              <h3><a href="https://arxiv.org/abs/2604.05014" target="_blank" rel="noreferrer">StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing</a></h3>
+              <p class="pub-authors">StarVLA Community</p>
+              <p>Composable infrastructure for VLA research. Project founder, core architect, and lead maintainer.</p>
+              <div class="pub-links"><a href="https://arxiv.org/abs/2604.05014" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/starVLA/starVLA" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a><a href="https://starvla.github.io/" target="_blank" rel="noreferrer">Project <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="publication-item reveal" id="paper-tstar" data-category="video">
+            <a class="pub-visual" href="assets/images/longvideo-haystack-demo.gif" data-lightbox aria-label="Enlarge figure for T* / LongVideoHaystack">
+              <img src="assets/images/longvideo-haystack-demo.gif" alt="T-star progressively searches video frames to locate the hanging jacket in a long-video question-answering example" loading="lazy" width="720" height="480">
+              <span class="image-hint" aria-hidden="true">View figure ⤢</span>
+            </a>
+            <div class="pub-copy">
+              <div class="pub-topline"><span>2025</span><b>CVPR</b><span class="pub-shortname">T* / LongVideoHaystack</span></div>
+              <h3><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Ye_Re-thinking_Temporal_Search_for_Long-Form_Video_Understanding_CVPR_2025_paper.html" target="_blank" rel="noreferrer">Re-thinking Temporal Search for Long-Form Video Understanding</a></h3>
+              <p class="pub-authors"><strong>Jinhui Ye</strong><sup>*</sup>, Zihan Wang<sup>*</sup>, Haosen Sun, Keshigeyan Chandrasegaran, Zane Durante, Cristobal Eyzaguirre, Yonatan Bisk, Juan Carlos Niebles, Ehsan Adeli, Li Fei-Fei, Jiajun Wu, Manling Li</p>
+              <p>Find the few relevant frames among tens of thousands before performing detailed video reasoning.</p>
+              <div class="pub-links"><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Ye_Re-thinking_Temporal_Search_for_Long-Form_Video_Understanding_CVPR_2025_paper.html" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/mll-lab-nu/TStar" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a><a href="https://huggingface.co/datasets/MLL-Lab/LongVideoHaystack" target="_blank" rel="noreferrer">Dataset <span aria-hidden="true">↗</span></a><a href="https://longvideohaystack.github.io/" target="_blank" rel="noreferrer">Project <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="publication-item reveal" id="paper-molerr2fix" data-category="language">
+            <a class="pub-visual" href="assets/images/molerr2fix-figure2.png" data-lightbox aria-label="Enlarge figure for MolErr2Fix">
+              <img src="assets/images/molerr2fix-figure2.png" alt="MolErr2Fix annotation pipeline: molecular caption generation and expert error localization, classification, explanation, and correction" loading="lazy" width="720" height="480">
+              <span class="image-hint" aria-hidden="true">View figure ⤢</span>
+            </a>
+            <div class="pub-copy">
+              <div class="pub-topline"><span>2025</span><b>EMNLP · Oral</b><span class="pub-shortname">MolErr2Fix</span></div>
+              <h3><a href="https://aclanthology.org/2025.emnlp-main.977/" target="_blank" rel="noreferrer">MolErr2Fix: Benchmarking LLM Trustworthiness in Chemistry via Modular Error Detection, Localization, Explanation, and Revision</a></h3>
+              <p class="pub-authors">Yuyang Wu<sup>*</sup>, <strong>Jinhui Ye</strong><sup>*</sup>, Shuhao Zhang<sup>*</sup>, Lu Dai, Yonatan Bisk, Olexandr Isayev</p>
+              <p>A benchmark for detecting, locating, explaining, and revising chemistry errors in language-model outputs.</p>
+              <div class="pub-links"><a href="https://aclanthology.org/2025.emnlp-main.977/" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/HeinzVonHank/MolErr2Fix" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a><a href="https://huggingface.co/datasets/YoungerWu/MolErr2Fix" target="_blank" rel="noreferrer">Dataset <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="publication-item reveal" id="paper-face" data-category="language">
+            <a class="pub-visual" href="assets/images/face.png" data-lightbox aria-label="Enlarge figure for FACE">
+              <img src="assets/images/face.png" alt="FACE maps collaborative filtering embeddings into interpretable language-model tokens" loading="lazy" width="720" height="480">
+              <span class="image-hint" aria-hidden="true">View figure ⤢</span>
+            </a>
+            <div class="pub-copy">
+              <div class="pub-topline"><span>2025</span><b>NeurIPS</b><span class="pub-shortname">FACE</span></div>
+              <h3><a href="https://openreview.net/forum?id=loznSxLomv" target="_blank" rel="noreferrer">FACE: A General Framework for Mapping Collaborative Filtering Embeddings into LLM Tokens</a></h3>
+              <p class="pub-authors">Chao Wang<sup>*</sup>, Yixin Song<sup>*</sup>, <strong>Jinhui Ye</strong>, Chuan Qin, Dazhong Shen, Lingfeng Liu, Xiang Wang, Yanyong Zhang</p>
+              <p>Mapping collaborative filtering representations into language-model tokens for interpretable recommendation.</p>
+              <div class="pub-links"><a href="https://openreview.net/forum?id=loznSxLomv" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/YixinRoll/FACE" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="publication-item reveal" id="paper-seper" data-category="language">
+            <a class="pub-visual" href="assets/images/seper.png" data-lightbox aria-label="Enlarge figure for SePer">
+              <img src="assets/images/seper.png" alt="SePer measures how retrieved evidence reduces semantic uncertainty" loading="lazy" width="720" height="480">
+              <span class="image-hint" aria-hidden="true">View figure ⤢</span>
+            </a>
+            <div class="pub-copy">
+              <div class="pub-topline"><span>2025</span><b>ICLR · Spotlight</b><span class="pub-shortname">SePer</span></div>
+              <h3><a href="https://openreview.net/forum?id=ixMBnOhFGd" target="_blank" rel="noreferrer">SePer: Measure Retrieval Utility Through the Lens of Semantic Perplexity Reduction</a></h3>
+              <p class="pub-authors">Lu Dai, Yijie Xu, <strong>Jinhui Ye</strong>, Hao Liu, Hui Xiong</p>
+              <p>Measure retrieval utility by how much the evidence reduces uncertainty in a language model&#x27;s answer.</p>
+              <div class="pub-links"><a href="https://openreview.net/forum?id=ixMBnOhFGd" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/sepermetric/seper" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a><a href="https://sepermetric.github.io/" target="_blank" rel="noreferrer">Project <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="publication-item reveal" id="paper-signcl" data-category="language">
+            <a class="pub-visual" href="assets/images/signcl.png" data-lightbox aria-label="Enlarge figure for SignCL">
+              <img src="assets/images/signcl.png" alt="SignCL improves the discriminability of sign language representations" loading="lazy" width="720" height="480">
+              <span class="image-hint" aria-hidden="true">View figure ⤢</span>
+            </a>
+            <div class="pub-copy">
+              <div class="pub-topline"><span>2024</span><b>NeurIPS</b><span class="pub-shortname">SignCL</span></div>
+              <h3><a href="https://arxiv.org/abs/2405.14312" target="_blank" rel="noreferrer">Improving Gloss-free Sign Language Translation by Reducing Representation Density</a></h3>
+              <p class="pub-authors"><strong>Jinhui Ye</strong>, Xing Wang, Wenxiang Jiao, Junwei Liang, Hui Xiong</p>
+              <p>Contrastive learning for more discriminative visual representations in gloss-free sign language translation.</p>
+              <div class="pub-links"><a href="https://arxiv.org/abs/2405.14312" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/JinhuiYE/SignCL" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="publication-item reveal" id="paper-xmda" data-category="language">
+            <a class="pub-visual" href="assets/images/sign-language-translation.png" data-lightbox aria-label="Enlarge figure for XmDA">
+              <img src="assets/images/sign-language-translation.png" alt="Sign language video frames, gloss annotations, and the spoken-language translation — PHOENIX14T task illustration from Camgoz et al., CVPR 2018" loading="lazy" width="720" height="480">
+              <span class="image-hint" aria-hidden="true">View figure ⤢</span>
+            </a>
+            <div class="pub-copy">
+              <div class="pub-topline"><span>2023</span><b>EMNLP</b><span class="pub-shortname">XmDA</span></div>
+              <h3><a href="https://aclanthology.org/2023.findings-emnlp.904/" target="_blank" rel="noreferrer">Cross-modality Data Augmentation for End-to-End Sign Language Translation</a></h3>
+              <p class="pub-authors"><strong>Jinhui Ye</strong>, Wenxiang Jiao, Xing Wang, Zhaopeng Tu, Hui Xiong</p>
+              <p>Transfer gloss-to-text knowledge to video-to-text translation through cross-modality data augmentation.</p>
+              <p class="pub-image-credit"><a href="https://www.cihancamgoz.com/pub/camgoz2018cvpr.pdf" target="_blank" rel="noreferrer">Task illustration: PHOENIX14T · Camgoz et al., CVPR 2018</a></p>
+              <div class="pub-links"><a href="https://aclanthology.org/2023.findings-emnlp.904/" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/Atrewin/SignXmDA" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="publication-item reveal" id="paper-pgen" data-category="language">
+            <a class="pub-visual" href="assets/images/pgen.jpg" data-lightbox aria-label="Enlarge figure for PGen">
+              <img src="assets/images/pgen.jpg" alt="PGen generates in-domain text to scale back-translation for sign language gloss translation" loading="lazy" width="720" height="480">
+              <span class="image-hint" aria-hidden="true">View figure ⤢</span>
+            </a>
+            <div class="pub-copy">
+              <div class="pub-topline"><span>2023</span><b>EACL</b><span class="pub-shortname">PGen</span></div>
+              <h3><a href="https://aclanthology.org/2023.eacl-main.34/" target="_blank" rel="noreferrer">Scaling Back-Translation with Domain Text Generation for Sign Language Gloss Translation</a></h3>
+              <p class="pub-authors"><strong>Jinhui Ye</strong><sup>*</sup>, Wenxiang Jiao<sup>*</sup>, Xing Wang, Zhaopeng Tu</p>
+              <p>Generate in-domain spoken-language text to scale back-translation when parallel sign-language data is scarce.</p>
+              <div class="pub-links"><a href="https://aclanthology.org/2023.eacl-main.34/" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/Atrewin/PGen" target="_blank" rel="noreferrer">Code &amp; data <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <!-- PUBLICATIONS:END -->
+        </div>
+      </section>
+
+      <section class="content-section experience-section" id="experience" aria-labelledby="experience-title">
+        <div class="experience-heading">
+          <div class="section-title">
+            <p class="section-label">Research journey</p>
+            <h2 id="experience-title">Internships &amp; Visits</h2>
+          </div>
+          <p class="experience-intro">From understanding human communication to building agents that perceive, remember, and act.</p>
+        </div>
+
+        <p class="journey-hint" aria-hidden="true">Scroll to explore <span>→</span></p>
+        <div class="research-path" tabindex="0" role="region" aria-label="Internships and research visits timeline">
+          <article class="path-node reveal">
+            <a class="path-logo" href="https://ai.tencent.com/ailab/nlp/en/index.html" target="_blank" rel="noreferrer" aria-label="Visit Tencent AI Lab">
+              <img src="assets/logos/tencent-ai-lab.png" alt="Tencent AI Lab logo" loading="lazy">
+            </a>
+            <div class="path-index"><span>01</span><time>2021.08—2022.08</time></div>
+            <h3>Tencent AI Lab</h3>
+            <p>Research Intern</p>
+            <strong>Sign language translation</strong>
+          </article>
+
+          <article class="path-node reveal">
+            <a class="path-logo path-logo-stanford" href="https://svl.stanford.edu/" target="_blank" rel="noreferrer" aria-label="Visit Stanford Vision and Learning Lab">
+              <img src="assets/logos/stanford-university.png" alt="Stanford University" loading="lazy" width="400" height="400">
+            </a>
+            <div class="path-index"><span>02</span><time>2023.12—2024.10</time></div>
+            <h3>Stanford University</h3>
+            <p class="path-unit">Vision &amp; Learning Lab</p>
+            <p>Research Intern</p>
+            <strong>Long-form video search</strong>
+          </article>
+
+          <article class="path-node reveal">
+            <a class="path-logo" href="https://www.lti.cs.cmu.edu/" target="_blank" rel="noreferrer" aria-label="Visit CMU Language Technologies Institute">
+              <img src="assets/logos/carnegie-mellon.png" alt="Carnegie Mellon University" loading="lazy" width="900" height="900">
+            </a>
+            <div class="path-index"><span>03</span><time>2024.09—2025.03</time></div>
+            <h3>Carnegie Mellon</h3>
+            <p class="path-unit">Language Technologies Institute</p>
+            <p>Visiting Student</p>
+            <strong>Embodied memory & retrieval</strong>
+          </article>
+
+          <article class="path-node reveal">
+            <a class="path-logo path-logo-wide" href="https://www.shlab.org.cn/" target="_blank" rel="noreferrer" aria-label="Visit Shanghai AI Laboratory">
+              <img src="assets/logos/shanghai-ai-lab-stacked.png" alt="Shanghai Artificial Intelligence Laboratory" loading="lazy" width="673" height="389">
+            </a>
+            <div class="path-index"><span>04</span><time>2025.02—2025.08</time></div>
+            <h3>Shanghai AI Lab</h3>
+            <p>Research Intern</p>
+            <strong>InternVLA-M1 / ST4VLA</strong>
+          </article>
+
+          <article class="path-node reveal">
+            <a class="path-logo" href="https://qwen.ai/" target="_blank" rel="noreferrer" aria-label="Visit Qwen">
+              <img src="assets/logos/qwen-official.png" alt="Qwen" loading="lazy" width="400" height="400">
+            </a>
+            <div class="path-index"><span>05</span><time>2025.10—2026</time></div>
+            <h3>Alibaba · Qwen</h3>
+            <p>Research Intern</p>
+            <strong>VLA training &amp; evaluation</strong>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="content-section education-section" id="education" aria-labelledby="education-title">
+        <div class="section-title">
+          <p class="section-label">Academic background</p>
+          <h2 id="education-title">Education</h2>
+        </div>
+        <div class="education-list">
+          <article>
+            <time>2025.09 — present</time>
+            <div><h3>The Hong Kong University of Science and Technology</h3><p>PhD in Computer Science</p><p class="education-advisors">Advisor: <a href="https://jiaya.me/home" target="_blank" rel="noreferrer">Prof. Jiaya Jia</a></p></div>
+          </article>
+          <article>
+            <time>2022.09 — 2025.04</time>
+            <div><h3>The Hong Kong University of Science and Technology (Guangzhou)</h3><p>MPhil in Artificial Intelligence</p><p class="education-advisors">Advisors: Prof. Hui Xiong and Prof. Junwei Liang</p></div>
+          </article>
+          <article>
+            <time>2018.09 — 2022.07</time>
+            <div><h3>South China University of Technology</h3><p>Bachelor’s in Software Engineering · Minor in Finance</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section awards-section" id="awards" aria-labelledby="awards-title">
+        <div class="section-title">
+          <p class="section-label">Recognition</p>
+          <h2 id="awards-title">Honors & Awards</h2>
+        </div>
+        <ul class="awards-list">
+          <li><time datetime="2025">2025</time><p><strong>EAI-100 Top 10 Open-Source Projects</strong> · StarVLA<br><span>Project recognition · <a href="https://modelscope.cn/brand/view/EAI-100" target="_blank" rel="noreferrer">Official list ↗</a></span></p></li>
+          <li><time datetime="2023">2023</time><p><strong>1st &amp; 2nd Place</strong> · Pazhou Algorithm Contest<br><span>Two projects in the Human–Machine Interaction Track</span></p></li>
+          <li><time datetime="2022">2022</time><p><strong>Outstanding Undergraduate Thesis</strong> · South China University of Technology</p></li>
+          <li><time datetime="2021">2021</time><p><strong>National Scholarship</strong> · China</p></li>
+        </ul>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <p class="section-label">Contact</p>
+        <h2>Let’s make knowledge <em>move.</em></h2>
+        <p>I welcome conversations around embodied AI, VLA systems, long-form video, and open-source research infrastructure.</p>
+        <div class="contact-links">
+          <a href="mailto:jye624@connect.hkust-gz.edu.cn">Email me ↗</a>
+          <a href="https://github.com/JinhuiYE" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://scholar.google.com/citations?user=RpXhJu0AAAAJ&hl=en" target="_blank" rel="noreferrer">Scholar ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="figure-dialog" id="figure-dialog" aria-labelledby="figure-caption">
+      <button class="dialog-close" type="button" aria-label="Close figure">Close <span aria-hidden="true">×</span></button>
+      <figure>
+        <div class="figure-image"></div>
+        <figcaption id="figure-caption"></figcaption>
+      </figure>
+    </dialog>
+
+    <footer>
+      <p>© <span id="year">2026</span> Jinhui Ye</p>
+      <p>Perception → memory → action.</p>
+      <a href="#about">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
