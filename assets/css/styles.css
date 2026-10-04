@@ -750,6 +750,16 @@ footer {
   background: rgba(40, 88, 224, 0.07);
 }
 
+.metrics-source-note { margin: -10px 0 18px; color: var(--ink-soft); font-size: 12px; line-height: 1.6; }
+.pub-metrics { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px; margin-top: 8px; }
+.publication-metric { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; color: var(--ink-soft); font-size: 14px; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; text-decoration: none; }
+.publication-metric svg { width: 15px; height: 15px; flex: 0 0 15px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.publication-metric:hover { color: var(--blue); text-decoration: underline; }
+@media screen and (max-width: 720px) {
+  .pub-metrics { gap: 0 18px; margin-top: 4px; }
+  .publication-metric { min-height: 44px; font-size: 14px; }
+}
+
 .experience-section {
   overflow: hidden;
 }
