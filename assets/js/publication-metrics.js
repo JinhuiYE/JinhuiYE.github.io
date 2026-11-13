@@ -17,19 +17,24 @@ export function semanticScholarId(value) {
   return typeof value === 'string' && /^[a-f0-9]{40}$/.test(value) ? value : null;
 }
 
+export function semanticScholarLookupId(value) {
+  if (semanticScholarId(value)) return value;
+  return typeof value === 'string' && /^ARXIV:\d{4}\.\d{4,5}$/.test(value) ? value : null;
+}
+
 export function semanticScholarIds(dataset) {
   if (dataset.semanticScholarIds !== undefined) {
     if (typeof dataset.semanticScholarIds !== 'string') return [];
     const ids = dataset.semanticScholarIds.split(',').map((id) => id.trim());
-    if (ids.length < 2 || ids.some((id) => !semanticScholarId(id)) || new Set(ids).size !== ids.length) return [];
+    if (ids.length < 2 || ids.some((id) => !semanticScholarLookupId(id)) || new Set(ids).size !== ids.length) return [];
     return ids;
   }
-  const id = semanticScholarId(dataset.semanticScholarId);
+  const id = semanticScholarLookupId(dataset.semanticScholarId);
   return id ? [id] : [];
 }
 
 const validCount = (count) => Number.isSafeInteger(count) && count >= 0;
-const normalizeId = (value, source) => source === 'github' ? normalizeGithubRepo(value) : semanticScholarId(value);
+const normalizeId = (value, source) => source === 'github' ? normalizeGithubRepo(value) : semanticScholarLookupId(value);
 const cacheKey = (source, id) => `${CACHE_PREFIX}${source}:v1:${id}`;
 
 export function githubStarCount(payload, repo) {
@@ -39,7 +44,9 @@ export function githubStarCount(payload, repo) {
 }
 
 export function semanticScholarCitationCount(payload, id) {
-  if (!semanticScholarId(id) || !payload || payload.paperId !== id) return null;
+  if (!semanticScholarLookupId(id) || !payload || !semanticScholarId(payload.paperId)) return null;
+  const matches = id.startsWith('ARXIV:') ? payload.externalIds?.ArXiv === id.slice(6) : payload.paperId === id;
+  if (!matches) return null;
   return validCount(payload.citationCount) ? payload.citationCount : null;
 }
 
@@ -261,7 +268,7 @@ async function refreshGithub(pending, { fetchImpl, timeoutMs, now, storage }, co
 async function refreshSemanticScholar({ pending, papers, render }, { fetchImpl, timeoutMs, now, storage }) {
   if (!pending.length) return;
   const payload = await withTimeout(async (signal) => {
-    const response = await fetchImpl('https://api.semanticscholar.org/graph/v1/paper/batch?fields=paperId,title,citationCount,url', {
+    const response = await fetchImpl('https://api.semanticscholar.org/graph/v1/paper/batch?fields=paperId,title,citationCount,url,externalIds', {
       method: 'POST',
       // This safelisted content type keeps the anonymous POST a simple CORS request.
       headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
@@ -271,7 +278,17 @@ async function refreshSemanticScholar({ pending, papers, render }, { fetchImpl, 
     return response.ok ? response.json() : null;
   }, timeoutMs);
   if (!Array.isArray(payload)) return;
-  const entries = new Map(payload.filter((entry) => semanticScholarId(entry?.paperId)).map((entry) => [entry.paperId, entry]));
+  const entries = new Map();
+  payload.forEach((entry) => {
+    if (!semanticScholarId(entry?.paperId)) return;
+    const identities = [entry.paperId];
+    const arxiv = semanticScholarLookupId(`ARXIV:${entry.externalIds?.ArXiv}`);
+    if (arxiv) identities.push(arxiv);
+    identities.forEach((id) => {
+      // Ambiguous duplicate identities are unusable; array order must not pick a paper.
+      entries.set(id, entries.has(id) ? null : entry);
+    });
+  });
   pending.forEach((id) => {
     const count = semanticScholarCitationCount(entries.get(id), id);
     if (count === null) return;

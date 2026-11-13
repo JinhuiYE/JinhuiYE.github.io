@@ -82,7 +82,7 @@ let rotationEnabled = !reduceMotion.matches;
 let rotationTimer;
 let showcaseVisible = false;
 let showcaseFocused = false;
-const rotationDelay = 10000;
+const rotationDelay = 5000;
 
 function scheduleRotation() {
   clearTimeout(rotationTimer);
@@ -109,6 +109,7 @@ function syncDemoControl(panel) {
 
 async function playDemo(panel) {
   const video = panel.querySelector("video");
+  // Reuse each video and its currentTime so returning to a project resumes playback.
   try { await video.play(); } catch { /* Keep the poster and manual play button available. */ }
   syncDemoControl(panel);
 }
@@ -122,8 +123,8 @@ function selectDemo(index, moveFocus = false) {
   });
   demoPanels.forEach((panel) => {
     const selected = panel === chosen;
-    panel.hidden = !selected;
     if (!selected) panel.querySelector("video").pause();
+    panel.hidden = !selected;
   });
   activeDemo = chosen;
   if (moveFocus) demoTabs[index].focus();
