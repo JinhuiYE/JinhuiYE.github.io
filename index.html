@@ -94,11 +94,29 @@
             <div class="showcase-heading">
               <p class="section-label">Research in action</p>
               <div class="showcase-tabs" role="tablist" aria-label="Choose a research project">
-                <button type="button" id="tab-qwen" role="tab" aria-selected="true" aria-controls="demo-qwen" data-demo="qwen">Qwen-VLA</button>
+                <button type="button" id="tab-lambda0" role="tab" aria-selected="true" aria-controls="demo-lambda0" data-demo="lambda0" title="λ₀: Humanoid loco-manipulation">λ₀</button>
+                <button type="button" id="tab-qwen" role="tab" aria-selected="false" aria-controls="demo-qwen" data-demo="qwen" tabindex="-1">Qwen-VLA</button>
                 <button type="button" id="tab-intern" role="tab" aria-selected="false" aria-controls="demo-intern" data-demo="intern" tabindex="-1">InternVLA-M1</button>
               </div>
             </div>
-            <article class="current-work" id="demo-qwen" role="tabpanel" aria-labelledby="tab-qwen">
+            <article class="current-work" id="demo-lambda0" role="tabpanel" aria-labelledby="tab-lambda0">
+              <div class="current-work-copy">
+                <p class="section-label">Alibaba Group</p>
+                <h3>λ₀</h3>
+                <p>Learning whole-body humanoid skills from open-world human demonstrations.</p>
+                <div class="demo-links">
+                  <a href="https://lambdahumanoid.github.io/" target="_blank" rel="noreferrer">Project ↗</a>
+                  <a href="https://arxiv.org/abs/2610.18950" target="_blank" rel="noreferrer">Paper ↗</a>
+                </div>
+              </div>
+              <div class="current-work-media">
+                <video muted loop playsinline controls preload="none" poster="assets/images/lambda0-poster.jpg" aria-label="λ₀ humanoid loco-manipulation demo" data-src="assets/video/lambda0-demo.mp4">
+                  <source src="assets/video/lambda0-demo.mp4" type="video/mp4">
+                </video>
+                <button class="video-control" type="button" aria-label="Play λ₀ demo" hidden><span aria-hidden="true">▶</span></button>
+              </div>
+            </article>
+            <article class="current-work" id="demo-qwen" hidden role="tabpanel" aria-labelledby="tab-qwen">
               <div class="current-work-copy">
                 <p class="section-label">Alibaba · Qwen</p>
                 <h3>Qwen-VLA</h3>
