@@ -60,7 +60,7 @@ function filterPublications(category) {
     button.setAttribute("aria-pressed", String(active));
   });
   publicationItems.forEach((item) => {
-    item.hidden = category !== "all" && item.dataset.category !== category;
+    item.hidden = category !== "all" && !item.dataset.category.split(/\s+/).includes(category);
     if (!item.hidden) count += 1;
   });
   const status = document.querySelector(".publication-count");
@@ -327,4 +327,15 @@ if (sections.length) {
     }
   }, { passive: true });
   markSection();
+}
+
+const publicationDemo = document.querySelector('.pub-demo');
+if (publicationDemo) {
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const respectMotionPreference = () => {
+    publicationDemo.autoplay = !motionPreference.matches;
+    if (motionPreference.matches) publicationDemo.pause();
+  };
+  respectMotionPreference();
+  motionPreference.addEventListener('change', respectMotionPreference);
 }
