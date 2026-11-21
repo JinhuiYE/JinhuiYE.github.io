@@ -39,7 +39,7 @@
       <section class="profile-section" id="about">
         <aside class="profile-card">
           <div class="portrait-wrap">
-            <img src="assets/images/jinhui-ye.jpg" alt="Jinhui Ye with two alpacas" width="2105" height="2124">
+            <img src="assets/images/jinhui-ye-preview.webp" alt="Jinhui Ye with two alpacas" width="2105" height="2124">
             <span class="availability" aria-label="Open to collaboration"></span>
           </div>
           <div class="profile-heading">
@@ -111,9 +111,9 @@
               </div>
               <div class="current-work-media">
                 <video muted loop playsinline controls preload="none" poster="assets/images/lambda0-poster.jpg" aria-label="λ₀ humanoid loco-manipulation demo" data-src="assets/video/lambda0-demo.mp4">
-                  <source src="assets/video/lambda0-demo.mp4" type="video/mp4">
                 </video>
                 <button class="video-control" type="button" aria-label="Play λ₀ demo" hidden><span aria-hidden="true">▶</span></button>
+                <noscript><a class="video-control is-paused" href="assets/video/lambda0-demo.mp4" aria-label="Watch λ₀ demo"><span aria-hidden="true">▶</span></a></noscript>
               </div>
             </article>
             <article class="current-work" id="demo-qwen" hidden role="tabpanel" aria-labelledby="tab-qwen">
@@ -127,10 +127,10 @@
                 </div>
               </div>
               <div class="current-work-media">
-                <video muted loop playsinline controls preload="none" poster="assets/images/qwen-vla.png" aria-label="Qwen-VLA robot manipulation demo" data-src="https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen-VLA/demo.mp4">
-                  <source src="https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen-VLA/demo.mp4" type="video/mp4">
+                <video muted loop playsinline controls preload="none" data-poster="assets/images/qwen-vla-poster.webp" aria-label="Qwen-VLA robot manipulation demo" data-src="assets/video/qwen-vla-preview.mp4">
                 </video>
                 <button class="video-control" type="button" aria-label="Play Qwen-VLA demo" hidden><span aria-hidden="true">▶</span></button>
+                <noscript><a class="video-control is-paused" href="assets/video/qwen-vla-preview.mp4" aria-label="Watch Qwen-VLA demo"><span aria-hidden="true">▶</span></a></noscript>
               </div>
             </article>
             <article class="current-work" id="demo-intern" hidden role="tabpanel" aria-labelledby="tab-intern">
@@ -144,10 +144,10 @@
                 </div>
               </div>
               <div class="current-work-media">
-                <video muted loop playsinline controls preload="none" poster="assets/images/st4vla.png" aria-label="InternVLA-M1 robot manipulation demo" data-src="assets/video/internvla-m1-teaser.mp4">
-                  <source src="assets/video/internvla-m1-teaser.mp4" type="video/mp4">
+                <video muted loop playsinline controls preload="none" data-poster="assets/images/st4vla-poster.webp" aria-label="InternVLA-M1 robot manipulation demo" data-src="assets/video/internvla-m1-teaser.mp4">
                 </video>
                 <button class="video-control" type="button" aria-label="Play InternVLA-M1 demo" hidden><span aria-hidden="true">▶</span></button>
+                <noscript><a class="video-control is-paused" href="assets/video/internvla-m1-teaser.mp4" aria-label="Watch InternVLA-M1 demo"><span aria-hidden="true">▶</span></a></noscript>
               </div>
             </article>
             <div class="showcase-footer">
@@ -204,9 +204,10 @@
           <!-- PUBLICATIONS:START -->
           <article class="publication-item reveal" id="paper-starroboeval" data-category="vla language">
             <div class="pub-visual">
-              <video class="pub-demo" muted loop playsinline autoplay controls preload="metadata" poster="assets/images/starroboeval-poster.jpg" aria-label="starRoboEval introduction, evaluation question and benchmark results">
-                <source src="assets/video/starroboeval-overview.mp4" type="video/mp4">
+              <video class="pub-demo" muted loop playsinline controls preload="none" poster="assets/images/starroboeval-poster.jpg" aria-label="starRoboEval introduction, evaluation question and benchmark results" data-src="assets/video/starroboeval-overview.mp4">
               </video>
+              <button class="video-control is-paused" type="button" aria-label="Play starRoboEval overview" data-publication-video-control hidden><span aria-hidden="true">▶</span></button>
+              <noscript><a class="video-control is-paused" href="assets/video/starroboeval-overview.mp4" aria-label="Watch starRoboEval overview"><span aria-hidden="true">▶</span></a></noscript>
             </div>
             <div class="pub-copy">
               <div class="pub-topline"><span>2026</span><b>Blog</b><span class="pub-shortname">starRoboEval</span></div>
@@ -248,7 +249,7 @@
 
           <article class="publication-item reveal" id="paper-qwen-vla" data-category="vla">
             <a class="pub-visual" href="assets/images/qwen-vla.png" data-lightbox aria-label="Enlarge figure for Qwen-VLA">
-              <img src="assets/images/qwen-vla.png" alt="Qwen-VLA overview of a unified embodied model" loading="lazy" width="720" height="480">
+              <img src="assets/images/qwen-vla-poster.webp" alt="Qwen-VLA overview of a unified embodied model" loading="lazy" width="720" height="480">
               <span class="image-hint" aria-hidden="true">View figure ⤢</span>
             </a>
             <div class="pub-copy">
@@ -263,7 +264,7 @@
 
           <article class="publication-item reveal" id="paper-st4vla" data-category="vla">
             <a class="pub-visual" href="assets/images/st4vla.png" data-lightbox aria-label="Enlarge figure for ST4VLA">
-              <img src="assets/images/st4vla.png" alt="ST4VLA uses spatial grounding to guide robot action learning" loading="lazy" width="720" height="480">
+              <img src="assets/images/st4vla-poster.webp" alt="ST4VLA uses spatial grounding to guide robot action learning" loading="lazy" width="720" height="480">
               <span class="image-hint" aria-hidden="true">View figure ⤢</span>
             </a>
             <div class="pub-copy">
@@ -278,7 +279,7 @@
 
           <article class="publication-item reveal" id="paper-starvla" data-category="vla">
             <a class="pub-visual" href="assets/images/starvla-overview-demo.gif" data-lightbox aria-label="Enlarge figure for StarVLA">
-              <img src="assets/images/starvla-overview-demo.gif" alt="Animated excerpt from the StarVLA overview video showing model-backbone and action-head combinations with shared data loading, training, policy serving, and evaluation" loading="lazy" width="720" height="480">
+              <video class="pub-demo" muted loop playsinline preload="none" poster="assets/images/starvla-overview-demo-poster.webp" aria-label="Animated excerpt from the StarVLA overview video showing model-backbone and action-head combinations with shared data loading, training, policy serving, and evaluation" data-src="assets/video/starvla-overview-demo.mp4"></video>
               <span class="image-hint" aria-hidden="true">View figure ⤢</span>
             </a>
             <div class="pub-copy">
@@ -293,7 +294,7 @@
 
           <article class="publication-item reveal" id="paper-tstar" data-category="video">
             <a class="pub-visual" href="assets/images/longvideo-haystack-demo.gif" data-lightbox aria-label="Enlarge figure for T* / LongVideoHaystack">
-              <img src="assets/images/longvideo-haystack-demo.gif" alt="T-star progressively searches video frames to locate the hanging jacket in a long-video question-answering example" loading="lazy" width="720" height="480">
+              <video class="pub-demo" muted loop playsinline preload="none" poster="assets/images/longvideo-haystack-demo-poster.webp" aria-label="T-star progressively searches video frames to locate the hanging jacket in a long-video question-answering example" data-src="assets/video/longvideo-haystack-demo.mp4"></video>
               <span class="image-hint" aria-hidden="true">View figure ⤢</span>
             </a>
             <div class="pub-copy">
@@ -368,7 +369,7 @@
 
           <article class="publication-item reveal" id="paper-xmda" data-category="language">
             <a class="pub-visual" href="assets/images/sign-language-translation.png" data-lightbox aria-label="Enlarge figure for XmDA">
-              <img src="assets/images/sign-language-translation.png" alt="Sign language video frames, gloss annotations, and the spoken-language translation — PHOENIX14T task illustration from Camgoz et al., CVPR 2018" loading="lazy" width="720" height="480">
+              <img src="assets/images/sign-language-translation-preview.webp" alt="Sign language video frames, gloss annotations, and the spoken-language translation — PHOENIX14T task illustration from Camgoz et al., CVPR 2018" loading="lazy" width="720" height="480">
               <span class="image-hint" aria-hidden="true">View figure ⤢</span>
             </a>
             <div class="pub-copy">

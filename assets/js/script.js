@@ -5,6 +5,42 @@ const filterButtons = document.querySelectorAll(".filter");
 const publicationItems = document.querySelectorAll(".publication-item");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const compactNavigation = window.matchMedia("(max-width: 860px)");
+const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+const allowsVideoAutoplay = () => !reduceMotion.matches && !connection?.saveData;
+
+function loadVideoSource(video) {
+  if (!video.hasAttribute("src") && video.dataset.src) {
+    video.src = video.dataset.src;
+    video.load();
+  }
+}
+
+function observeVisibility(element, callback, threshold = 0.25) {
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(([entry]) => {
+      callback(entry.isIntersecting && entry.intersectionRatio >= threshold);
+    }, { threshold });
+    observer.observe(element);
+    return;
+  }
+  // Older browsers still defer loading until the media is actually on screen.
+  let pending = false;
+  const update = () => {
+    pending = false;
+    const rect = element.getBoundingClientRect();
+    const visibleHeight = Math.max(0, Math.min(rect.bottom, innerHeight) - Math.max(rect.top, 0));
+    const visibleWidth = Math.max(0, Math.min(rect.right, innerWidth) - Math.max(rect.left, 0));
+    callback(rect.width > 0 && rect.height > 0 && visibleWidth * visibleHeight >= rect.width * rect.height * threshold);
+  };
+  const schedule = () => {
+    if (!pending) { pending = true; requestAnimationFrame(update); }
+  };
+  window.addEventListener("scroll", schedule, { passive: true });
+  window.addEventListener("resize", schedule, { passive: true });
+  document.addEventListener("visibilitychange", schedule);
+  document.addEventListener("publicationsfiltered", schedule);
+  update();
+}
 
 if (menuButton && navigation) {
   const menuLabel = menuButton.textContent.trim() || "Menu";
@@ -65,6 +101,7 @@ function filterPublications(category) {
   });
   const status = document.querySelector(".publication-count");
   if (status) status.textContent = `${count} ${count === 1 ? "publication" : "publications"}`;
+  document.dispatchEvent(new Event("publicationsfiltered"));
 }
 
 if (filterButtons.length) {
@@ -78,7 +115,7 @@ const demoPanels = [...document.querySelectorAll(".current-work[role='tabpanel']
 let activeDemo = demoPanels[0];
 let userPausedDemo = false;
 const showcase = document.querySelector(".research-showcase");
-let rotationEnabled = !reduceMotion.matches;
+let rotationEnabled = allowsVideoAutoplay();
 let rotationTimer;
 let showcaseVisible = false;
 let showcaseFocused = false;
@@ -87,7 +124,7 @@ const rotationDelay = 5000;
 function scheduleRotation() {
   clearTimeout(rotationTimer);
   showcase?.classList.remove("is-rotating");
-  if (!rotationEnabled || document.hidden || !showcaseVisible || showcaseFocused) return;
+  if (!rotationEnabled || !allowsVideoAutoplay() || document.hidden || !showcaseVisible || showcaseFocused) return;
   showcase?.classList.add("is-rotating");
   rotationTimer = setTimeout(() => {
     selectDemo((demoPanels.indexOf(activeDemo) + 1) % demoPanels.length);
@@ -110,6 +147,7 @@ function syncDemoControl(panel) {
 async function playDemo(panel) {
   const video = panel.querySelector("video");
   // Reuse each video and its currentTime so returning to a project resumes playback.
+  loadVideoSource(video);
   try { await video.play(); } catch { /* Keep the poster and manual play button available. */ }
   syncDemoControl(panel);
 }
@@ -127,8 +165,10 @@ function selectDemo(index, moveFocus = false) {
     panel.hidden = !selected;
   });
   activeDemo = chosen;
+  const video = chosen.querySelector("video");
+  if (video.dataset.poster && !video.hasAttribute("poster")) video.poster = video.dataset.poster;
   if (moveFocus) demoTabs[index].focus();
-  if (!reduceMotion.matches && !userPausedDemo && showcaseVisible && !document.hidden) playDemo(chosen);
+  if (allowsVideoAutoplay() && !userPausedDemo && showcaseVisible && !document.hidden) playDemo(chosen);
   scheduleRotation();
 }
 
@@ -162,7 +202,7 @@ demoTabs.forEach((tab, index) => {
 if (demoTabs.length) selectDemo(0);
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) demoPanels.forEach((panel) => panel.querySelector("video").pause());
-  else if (activeDemo && showcaseVisible && !reduceMotion.matches && !userPausedDemo) playDemo(activeDemo);
+  else if (activeDemo && showcaseVisible && allowsVideoAutoplay() && !userPausedDemo) playDemo(activeDemo);
   scheduleRotation();
 });
 
@@ -172,15 +212,12 @@ if (showcase && demoTabs.length > 1) {
     showcaseFocused = showcase.contains(event.relatedTarget);
     scheduleRotation();
   });
-  if ("IntersectionObserver" in window) {
-    const demoObserver = new IntersectionObserver(([entry]) => {
-      showcaseVisible = entry.isIntersecting && entry.intersectionRatio >= 0.25;
-      if (!showcaseVisible) activeDemo.querySelector("video").pause();
-      else if (!reduceMotion.matches && !userPausedDemo && !document.hidden) playDemo(activeDemo);
-      scheduleRotation();
-    }, { threshold: 0.25 });
-    demoObserver.observe(showcase);
-  } else showcaseVisible = true;
+  observeVisibility(showcase, (visible) => {
+    showcaseVisible = visible;
+    if (!visible) activeDemo.querySelector("video").pause();
+    else if (allowsVideoAutoplay() && !userPausedDemo && !document.hidden) playDemo(activeDemo);
+    scheduleRotation();
+  });
   setRotation(rotationEnabled);
 }
 
@@ -220,6 +257,12 @@ reduceMotion.addEventListener("change", (event) => {
     setRotation(false);
     demoPanels.forEach((panel) => panel.querySelector("video").pause());
     document.querySelectorAll(".is-pending").forEach((element) => element.classList.remove("is-pending"));
+  }
+});
+connection?.addEventListener?.("change", () => {
+  if (!allowsVideoAutoplay()) {
+    setRotation(false);
+    demoPanels.forEach((panel) => panel.querySelector("video").pause());
   }
 });
 
@@ -280,12 +323,12 @@ if (figureDialog && typeof figureDialog.showModal === "function") {
       event.preventDefault();
       if (figureDialog.open) return;
       figureOpener = link;
-      const source = link.querySelector("img");
+      const source = link.querySelector("img, video");
       const enlarged = new Image();
       enlarged.src = link.href;
-      enlarged.alt = source.alt;
+      enlarged.alt = source.alt || source.getAttribute("aria-label") || link.getAttribute("aria-label") || "Research figure";
       figureDialog.querySelector(".figure-image").replaceChildren(enlarged);
-      figureDialog.querySelector("figcaption").textContent = source.alt;
+      figureDialog.querySelector("figcaption").textContent = enlarged.alt;
       lockFigureScroll();
       figureDialog.showModal();
       updateFigureViewport();
@@ -329,13 +372,45 @@ if (sections.length) {
   markSection();
 }
 
-const publicationDemo = document.querySelector('.pub-demo');
-if (publicationDemo) {
-  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const respectMotionPreference = () => {
-    publicationDemo.autoplay = !motionPreference.matches;
-    if (motionPreference.matches) publicationDemo.pause();
+document.querySelectorAll(".pub-demo").forEach((video) => {
+  const button = video.parentElement.querySelector("[data-publication-video-control]");
+  let visible = false;
+  let userPaused = false;
+  let automaticPause = false;
+  const pauseAutomatically = () => {
+    if (!video.paused) {
+      automaticPause = true;
+      video.pause();
+    }
   };
-  respectMotionPreference();
-  motionPreference.addEventListener('change', respectMotionPreference);
-}
+  const play = () => {
+    loadVideoSource(video);
+    video.play().catch(() => { /* Poster and manual playback remain available. */ });
+  };
+  const update = () => {
+    const hidden = document.hidden || video.closest(".publication-item")?.hidden;
+    if (!visible || hidden || !allowsVideoAutoplay()) pauseAutomatically();
+    else if (!userPaused) play();
+  };
+  video.addEventListener("pause", () => {
+    if (automaticPause) automaticPause = false;
+    else userPaused = true;
+  });
+  video.addEventListener("play", () => {
+    userPaused = false;
+    if (button) button.hidden = true;
+    if (!visible || document.hidden || video.closest(".publication-item")?.hidden) pauseAutomatically();
+  });
+  if (button) {
+    button.hidden = false;
+    button.addEventListener("click", () => {
+      userPaused = false;
+      play();
+    });
+  }
+  observeVisibility(video, (isVisible) => { visible = isVisible; update(); });
+  document.addEventListener("visibilitychange", update);
+  document.addEventListener("publicationsfiltered", update);
+  reduceMotion.addEventListener("change", update);
+  connection?.addEventListener?.("change", update);
+});

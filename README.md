@@ -15,3 +15,7 @@
 ST4VLA 的引用徽章按两篇来源加总：ST4VLA + InternVLA-M1；两篇分别动态查询和缓存。报告录像链接统一标记为 Recording。
 
 Blog 详情入口转向 [starRoboEval 官方文章](https://starvla.github.io/blogs/starRoboEval/)；通用 StarVLA 链接优先使用项目主页。旧 `/blog/starbenchserver/report/` 报告与媒体保留原路径，后续同步时不要删除这些已公开资源。
+
+媒体预览使用压缩后的 MP4（H.264、faststart）和 WebP/JPEG 封面。视频通过 `data-src` 延迟加载，仅在进入可视区域或用户点击时播放；隐藏的轮播项不预加载视频。原始高清图片和 GIF 仍供点击放大查看，Qwen-VLA 的完整录像仍由论文条目的 Demo 链接提供。
+
+后续从编辑工程重新导出时，请保留上述媒体文件、首页 `assets/js/script.js` 的按需加载逻辑，以及旧报告页的图片缩略图和视频按需加载逻辑，避免恢复大文件预加载。

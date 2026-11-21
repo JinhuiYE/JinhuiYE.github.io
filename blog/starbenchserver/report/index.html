@@ -234,11 +234,11 @@
   .hub-replay { position: absolute; right: 14px; bottom: 12px; font-size: 12px; padding: 3px 10px; }
   .rp-pick { display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 10px; margin-bottom: 12px; scrollbar-width: thin; }
   .rp-pick button { flex: 0 0 auto; width: 92px; border: 0; background: none; padding: 0; cursor: pointer; font: inherit; color: var(--muted); text-align: left; }
-  .rp-pick video { width: 92px; height: 69px; object-fit: cover; display: block; border-radius: 6px; background: #000; outline: 2px solid transparent; outline-offset: 2px; opacity: .72; transition: opacity .15s; pointer-events: none; }
-  .rp-pick button:hover video { opacity: 1; }
+  .rp-pick img { width: 92px; height: 69px; object-fit: cover; display: block; border-radius: 6px; background: #000; outline: 2px solid transparent; outline-offset: 2px; opacity: .72; transition: opacity .15s; pointer-events: none; }
+  .rp-pick button:hover img { opacity: 1; }
   .rp-pick button span { display: block; font-size: 11.5px; margin-top: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .rp-pick button[aria-selected="true"] { color: var(--text); font-weight: 600; }
-  .rp-pick button[aria-selected="true"] video { outline-color: var(--accent); opacity: 1; }
+  .rp-pick button[aria-selected="true"] img { outline-color: var(--accent); opacity: 1; }
   .rp-cap { font-size: 12.5px; color: var(--muted); margin-top: 8px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
   .acts-wrap { max-height: 230px; overflow: auto; margin-top: 10px; }
   .acts-wrap table { margin-top: 0; }
@@ -608,7 +608,7 @@ scores, layouts/seeds, native assets, evaluator files or other episodes.</pre></
       <div class="rp-pick" role="tablist" id="rp-tabs" aria-label="Choose benchmark"></div>
       <div class="replay">
         <div>
-          <video id="rv" muted playsinline preload="auto"></video>
+          <video id="rv" muted playsinline preload="none"></video>
           <div class="controls">
             <button class="pbtn" id="rplay">Play</button>
             <div class="scrub" id="rscrub" role="slider" tabindex="0" aria-label="Replay position"><div class="track"></div><div class="fill" id="rfill"></div></div>
@@ -695,6 +695,15 @@ const OUR = {"simpler_env": {"round": "15 tasks × 5 seeds", "date": "Oct 6", "s
 const HARNESS = {"simpler_env": {"v": 86.8, "src": "https://arxiv.org/abs/2510.11660"}, "libero": {"v": 99.9, "src": "https://arxiv.org/abs/2608.17209"}, "calvin": {"v": 99.6, "src": "https://arxiv.org/abs/2503.21969"}, "metaworld": {"v": 96.0, "src": "https://arxiv.org/abs/2601.20334"}, "robodojo": {"v": 51.6, "src": "https://arxiv.org/abs/2610.01939"}, "robocasa365": {"v": 65.6, "src": "https://arxiv.org/abs/2610.01939", "label": "65.6% (atomic)"}, "robocasa_tabletop": {"v": 18.96, "src": "https://arxiv.org/abs/2610.28259"}, "robotwin": {"v": 76.0, "src": "https://arxiv.org/abs/2610.28259"}, "behavior": {"v": 37.0, "src": "https://arxiv.org/abs/2610.22471"}, "simple_humanoid": {"v": 96.3, "src": "https://arxiv.org/abs/2610.22471"}, "libero_plus": {"v": 92.4, "src": "https://arxiv.org/abs/2608.17209"}, "vln_ce": {"v": 83.0, "src": "https://arxiv.org/abs/2607.26148", "label": "83.0%"}};
 const REPLAY = REPLAYS.simpler_env;
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const conserveMedia = reduceMotion || !!navigator.connection?.saveData;
+const loadVideo = v => {
+  if (v.dataset.src && !v.getAttribute("src")) {
+    v.preload = "metadata";
+    v.src = v.dataset.src;
+    v.load();
+  }
+};
+const playVideo = v => { loadVideo(v); v.play().catch(() => {}); };
 const tip = document.getElementById("tip");
 function showTip(html, x, y) { tip.innerHTML = html; tip.style.left = Math.min(innerWidth - 290, x + 14) + "px"; tip.style.top = (y + 14) + "px"; tip.style.opacity = 1; }
 function hideTip() { tip.style.opacity = 0; }
@@ -816,14 +825,21 @@ const SHORT = { simpler_env: "Pick coke can", libero: "Black bowl onto plate", c
 const SOURCE = { simpler_env: "single episode, Oct 5", libero: "from the LIBERO evaluation round", calvin: "from the CALVIN evaluation round", metaworld: "from the MT50 native-500 round", robodojo: "single episode, Oct 5 · native score 100", robocasa365: "single episode, Oct 5", robocasa_tabletop: "single episode, Oct 5", robotwin: "single episode, Oct 5", behavior: "single episode, Oct 5", simple_humanoid: "from the 12-task SIMPLE round", vla_arena: "historical episode, Oct 5", libero_plus: "single episode, Oct 5", domino: "historical episode, Oct 5 · manipulation score 29.35", vln_ce: "from the 373-route VLN-CE round · SPL 1.0" };
 const ORDER = Object.keys(REPLAYS);
 const outcome = d => d.success ? ["ok", "success"] : d.status === "completed" ? ["no", "failure"] : ["wn", "engineering error"];
-const autoIO = reduceMotion ? null : new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause()), { threshold: .2 });
-const observeAuto = v => { if (autoIO) autoIO.observe(v); else v.controls = true; };
+const autoVideos = new Set();
+const autoIO = conserveMedia || !("IntersectionObserver" in window) ? null : new IntersectionObserver(es => es.forEach(e => {
+  e.target.dataset.visible = String(e.isIntersecting);
+  if (e.isIntersecting && !document.hidden) playVideo(e.target); else e.target.pause();
+}), { threshold: .2 });
+const observeAuto = v => { autoVideos.add(v); if (autoIO) autoIO.observe(v); };
+document.addEventListener("visibilitychange", () => autoVideos.forEach(v => {
+  if (!document.hidden && v.dataset.visible === "true" && !conserveMedia) playVideo(v); else v.pause();
+}));
 
 (() => {
   const strip = document.getElementById("strip");
   const STRIP_ORDER = ["simpler_env", "robodojo", "vln_ce", "robocasa365", "behavior", "simple_humanoid", "robocasa_tabletop", "libero", "robotwin", "metaworld", "vla_arena", "calvin", "domino", "libero_plus"];
   strip.innerHTML = STRIP_ORDER.map(b => { const d = REPLAYS[b], [k, l] = outcome(d);
-    return '<div class="tile"><button data-b="' + b + '" aria-label="Open ' + NAMES[b] + ' replay" title="' + SHORT[b] + '"><div class="v"><video muted loop playsinline preload="metadata" src="media/replay/' + d.video + '"></video><span class="lab">' + NAMES[b] + "</span></div></button></div>"; }).join("");
+    return '<div class="tile"><button data-b="' + b + '" aria-label="Open ' + NAMES[b] + ' replay" title="' + SHORT[b] + '"><div class="v"><video muted loop playsinline preload="none" poster="media/posters/' + b + '.jpg" data-src="media/replay/' + d.video + '"></video><span class="lab">' + NAMES[b] + "</span></div></button></div>"; }).join("");
   strip.querySelectorAll("video").forEach(observeAuto);
   let down = null, moved = false;
   strip.addEventListener("pointerdown", e => { if (e.pointerType !== "mouse") return; down = { x: e.clientX, s: strip.scrollLeft }; moved = false; });
@@ -839,8 +855,9 @@ const observeAuto = v => { if (autoIO) autoIO.observe(v); else v.controls = true
 (() => {
   const v = document.getElementById("rv"), btn = document.getElementById("rplay"), scrub = document.getElementById("rscrub");
   const fill = document.getElementById("rfill"), read = document.getElementById("rread"), list = document.getElementById("dlist"), tabs = document.getElementById("rp-tabs");
-  tabs.innerHTML = ORDER.map(b => '<button role="tab" data-b="' + b + '" title="' + NAMES[b] + " · " + outcome(REPLAYS[b])[1] + '"><video muted playsinline preload="metadata" src="media/replay/' + REPLAYS[b].video + '#t=0.5"></video><span>' + NAMES[b] + "</span></button>").join("");
-  let D = null, N = 1, last = -1;
+  tabs.innerHTML = ORDER.map(b => '<button role="tab" data-b="' + b + '" title="' + NAMES[b] + " · " + outcome(REPLAYS[b])[1] + '"><img src="media/posters/' + b + '.jpg" alt="" width="92" height="69" loading="lazy" decoding="async"><span>' + NAMES[b] + "</span></button>").join("");
+  let D = null, N = 1, last = -1, pendingSeek = null;
+  let replayVisible = false, resumeWhenVisible = !conserveMedia;
   const fmtv = x => Math.abs(x) < 1e-9 ? "0" : String(x);
   function load(b) {
     D = REPLAYS[b]; N = D.total_steps || 1; last = -1;
@@ -852,13 +869,27 @@ const observeAuto = v => { if (autoIO) autoIO.observe(v); else v.controls = true
     list.innerHTML = "";
     list.style.display = D.calls.length <= 66 ? "" : "none";
     if (D.calls.length <= 66) D.calls.forEach(c => { const x = document.createElement("button"); x.textContent = c.call; x.title = "Decision " + c.call; x.onclick = () => seek(c.steps[0]); list.appendChild(x); });
-    v.src = "media/replay/" + D.video; v.playbackRate = D.calls.length > 300 ? 2 : .5; v.load();
+    v.pause();
+    v.removeAttribute("src");
+    v.preload = "none";
+    v.dataset.src = "media/replay/" + D.video;
+    v.poster = "media/posters/" + b + ".jpg";
+    pendingSeek = null;
+    v.load();
+    v.playbackRate = D.calls.length > 300 ? 2 : .5;
     render(1);
   }
-  window.loadReplay = load;
+  window.loadReplay = b => { load(b); resumeWhenVisible = true; if (replayVisible || !("IntersectionObserver" in window)) playVideo(v); };
   const frames = () => N + 1;
   const stepAt = t => Math.min(N, Math.floor(t / (v.duration || 1) * frames()));
-  function seek(s) { if (v.duration) v.currentTime = Math.min(v.duration - .01, (s + .5) / frames() * v.duration); render(s); }
+  function seek(s) {
+    loadVideo(v);
+    if (v.readyState >= 2 && Number.isFinite(v.duration) && v.duration > 0 && v.seekable.length && v.seekable.end(v.seekable.length - 1) > 0) {
+      pendingSeek = null;
+      v.currentTime = Math.min(v.duration - .01, (s + .5) / frames() * v.duration);
+    } else { pendingSeek = s; v.preload = "auto"; }
+    render(s);
+  }
   function render(s) {
     if (!D || s === last) return; last = s;
     let i = D.calls.findIndex(c => s <= c.steps[1]); if (i < 0) i = D.calls.length - 1;
@@ -873,18 +904,30 @@ const observeAuto = v => { if (autoIO) autoIO.observe(v); else v.controls = true
     [...list.children].forEach((x, k) => { x.classList.toggle("on", k === i); x.classList.toggle("past", k < i); });
     fill.style.width = s / N * 100 + "%"; read.textContent = "step " + s + " / " + N; scrub.setAttribute("aria-valuenow", s);
   }
-  v.addEventListener("timeupdate", () => render(stepAt(v.currentTime)));
+  v.addEventListener("timeupdate", () => { if (pendingSeek === null) render(stepAt(v.currentTime)); });
+  ["loadedmetadata", "loadeddata", "canplay", "progress"].forEach(name => v.addEventListener(name, () => { if (pendingSeek !== null) seek(pendingSeek); }));
   v.addEventListener("play", () => btn.textContent = "Pause");
   v.addEventListener("pause", () => btn.textContent = "Play");
-  v.addEventListener("ended", () => btn.textContent = "Replay");
-  btn.onclick = () => v.paused ? v.play() : v.pause();
-  tabs.addEventListener("click", e => { const t = e.target.closest("button[data-b]"); if (t) { load(t.dataset.b); v.play().catch(() => {}); } });
+  v.addEventListener("ended", () => { btn.textContent = "Replay"; resumeWhenVisible = false; });
+  btn.onclick = () => { resumeWhenVisible = v.paused; if (v.paused) playVideo(v); else v.pause(); };
+  tabs.addEventListener("click", e => { const t = e.target.closest("button[data-b]"); if (t) { load(t.dataset.b); resumeWhenVisible = true; playVideo(v); } });
   const fromX = x => { const r = scrub.getBoundingClientRect(); return Math.round(Math.max(0, Math.min(1, (x - r.left) / r.width)) * N); };
-  scrub.addEventListener("pointerdown", e => { v.pause(); scrub.setPointerCapture(e.pointerId); seek(fromX(e.clientX)); });
+  scrub.addEventListener("pointerdown", e => { resumeWhenVisible = false; v.pause(); scrub.setPointerCapture(e.pointerId); seek(fromX(e.clientX)); });
   scrub.addEventListener("pointermove", e => { if (e.buttons) seek(fromX(e.clientX)); });
   scrub.addEventListener("keydown", e => { if (e.key === "ArrowRight") { seek(Math.min(N, last + 1)); e.preventDefault(); } if (e.key === "ArrowLeft") { seek(Math.max(0, last - 1)); e.preventDefault(); } });
   load("simpler_env");
-  if (!reduceMotion) { const io = new IntersectionObserver(es => { if (es[0].isIntersecting) { v.play().catch(() => {}); io.disconnect(); } }, { threshold: .5 }); io.observe(v); }
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => {
+      replayVisible = es[0].isIntersecting;
+      if (replayVisible && !document.hidden && resumeWhenVisible) playVideo(v);
+      else if (!replayVisible) v.pause();
+    }, { threshold: .5 });
+    io.observe(v);
+  }
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) v.pause();
+    else if (replayVisible && resumeWhenVisible) playVideo(v);
+  });
 })();
 
 
